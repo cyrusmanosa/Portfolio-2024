@@ -1,0 +1,52 @@
+{
+    "name": "Man Ka Chun - Cyrus",
+    "title": "Portfolio Ver.2",
+    "country": "HongKonger",
+    "location": "Osaka",
+    "itemIntro": "INTRODUCE",
+    "hobby": "Photography , Hiking",
+    "cv":"https://drive.google.com/file/d/1z4_UlXsHE1ApHwa6zHDFoAfKNkmkQRoX/view?usp=drive_link",
+    "intro": "Cyrus is an aspiring Web Full Stack Engineer currently studying IT in Osaka,Japan,with an anticipated graduation date of March 2025. Prior to his foray into IT,Cyrus worked in the video production industry as a video editor, photographer and multimedia designer, specializing in visual media and commercial video production.",
+    "companyList": {
+        "sjm":{
+            "s_conpanyName": "SJM（Macao）",
+            "s_timeRange": "2018/09 - 2020/04",
+            "s_p1": "Event video shooting to edit highlight video.",
+            "s_p2": "Created new video to update channel of company.",
+            "s_p3": "Created the TVC for the company event."
+        },
+        "fhia":{
+            "f_conpanyName": "Ahct Group - FHIA（Macao）",
+            "f_timeRange": "2017/03 - 2018/03",
+            "f_p1": "Promotion video and event photos shooting.",
+            "f_p2": "Created motion graphic video of promotion."
+        },
+        "autoEdit":{
+            "a_conpanyName": "AutoEdit.Ltd（Hong Kong）",
+            "a_timeRange": "2016/09 - 2017/02",
+            "a_p1": "Advertising and event video shooting.",
+            "a_p2": "Promotion video and event photos shooting."
+        }
+    },
+    "portfolio": {
+        "year1":{
+            "y1title": "Year1 - Portfolio Website",
+            "y1msg": "This portfolio website was created using Wix before I graduated from Vtc in Hong Kong. It was developed using the HTML, CSS, and JavaScript that I learned in my first year at Osaka Ecc Computer School, and is managed using Firebase Hosting."
+        },
+        "year2":{
+            "y2title": "Year2 - Individual Creation Project",
+            "y2intro1a": "A New Wave of Dating Apps!",
+            "y2intro1b": "Dating Date",
+            "y2intro1c": "Find Your Perfect Match",
+            
+            "y2title2": "Revolutionary Matching System",
+            "y2intro2a": "Instead of traditional profiles and swiping, Dating Date uses a unique question-based system to find your perfect match based on shared interests and hobbies.",
+            "y2intro2b": "Actively search for up to 3 matches by matching users based on criteria in the database. With Dating Date, there are endless possibilities for finding your perfect match.",
+            
+            "y2title3": "LocalSystem",
+            "y2front": "FrontEnd",
+            "y2back": "BackEnd",
+            "y2db": "Database"
+        }
+    }
+}
