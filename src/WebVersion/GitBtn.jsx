@@ -11,8 +11,6 @@ function MyDialog() {
     const [gitData, setGitData] = useState([]);
     const githubToken = process.env.GITHUBTOKEN;
     const apiurl = "https://api.github.com/user/repos";
-    const rrrr = process.env.REACT_APP_NAME;
-    console.log(rrrr);
 
     useEffect(() => {
         const fetchData = async () => {
