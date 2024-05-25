@@ -6,12 +6,12 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Axios from "axios";
 import styled from '@emotion/styled';
 
-
 function MyDialog() {
     const [open, setOpen] = useState(false);
     const [gitData, setGitData] = useState([]);
-    const githubToken = process.env.GITHUB_TOKEN;
-    const apiurl = "https://api.github.com/user/repos"
+    const githubToken = process.env.GITHUB_TOKEN; // 从环境变量中读取 GitHub token
+    const apiurl = "https://api.github.com/user/repos";
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -22,19 +22,17 @@ function MyDialog() {
                     .filter((repo) => repo.private === false)
                     .filter((repo) => repo.owner.login === "cyrusmanosa")
                     .filter((repo) => repo.name !== "cyrusmanosa")
-                    .map(
-                        (repo) => ({
-                            name: repo.name,
-                            html_url: repo.html_url,
-                        }),
-                    );
+                    .map((repo) => ({
+                        name: repo.name,
+                        html_url: repo.html_url,
+                    }));
                 setGitData(filteredData);
             } catch (error) {
                 console.error(error);
             }
         };
         fetchData();
-    }, []);
+    }, [githubToken]); // 仅在 githubToken 发生变化时重新获取数据
 
     const HandleOpenUrl = (url) => {
         window.open(url, "_blank");
