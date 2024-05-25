@@ -9,8 +9,7 @@ import styled from '@emotion/styled';
 function MyDialog() {
     const [open, setOpen] = useState(false);
     const [gitData, setGitData] = useState([]);
-    const apiurl = "https://api.github.com/cyrusmanosa/repos";
-
+    const apiurl = "https://api.github.com/users/cyrusmanosa/repos";
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -29,7 +28,7 @@ function MyDialog() {
             }
         };
         fetchData();
-    });
+    }, []);
 
     const HandleOpenUrl = (url) => {
         window.open(url, "_blank");
