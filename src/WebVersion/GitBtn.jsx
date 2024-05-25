@@ -8,10 +8,11 @@ import styled from '@emotion/styled';
 
 
 function MyDialog() {
+    const githubToken = process.env.GITHUB_TOKEN;
     const [open, setOpen] = useState(false);
     const [gitData, setGitData] = useState([]);
     const apiurl = "https://api.github.com/user/repos"
-    const apikey = `Bearer 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`
+    const apikey = `Bearer ${githubToken}`
 
     useEffect(() => {
         const fetchData = async () => {
