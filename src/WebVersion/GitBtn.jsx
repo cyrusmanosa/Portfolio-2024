@@ -10,8 +10,8 @@ function MyDialog() {
     const [open, setOpen] = useState(false);
     const [gitData, setGitData] = useState([]);
     const githubToken = process.env.GITHUBTOKEN;
-    const rrrr = process.env.REACT_APP_NAME;
     const apiurl = "https://api.github.com/user/repos";
+    const rrrr = process.env.REACT_APP_NAME;
     console.log(rrrr);
 
     useEffect(() => {
