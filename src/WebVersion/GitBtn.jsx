@@ -12,13 +12,12 @@ function MyDialog() {
     const [open, setOpen] = useState(false);
     const [gitData, setGitData] = useState([]);
     const apiurl = "https://api.github.com/user/repos"
-    const apikey = `Bearer ${githubToken}`
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await Axios.get(apiurl, {
-                    headers: { Authorization: `${apikey}` },
+                    headers: { Authorization: `${githubToken}` },
                 });
                 const filteredData = response.data
                     .filter((repo) => repo.private === false)
