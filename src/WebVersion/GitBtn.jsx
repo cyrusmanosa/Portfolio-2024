@@ -8,16 +8,15 @@ import styled from '@emotion/styled';
 
 
 function MyDialog() {
-    const githubToken = process.env.GITHUB_TOKEN;
     const [open, setOpen] = useState(false);
     const [gitData, setGitData] = useState([]);
+    const githubToken = process.env.GITHUB_TOKEN;
     const apiurl = "https://api.github.com/user/repos"
-
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await Axios.get(apiurl, {
-                    headers: { Authorization: `${githubToken}` },
+                    headers: { Authorization: `Bearer ${githubToken}` }
                 });
                 const filteredData = response.data
                     .filter((repo) => repo.private === false)
