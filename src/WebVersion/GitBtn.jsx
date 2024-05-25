@@ -11,7 +11,7 @@ function MyDialog() {
     const [open, setOpen] = useState(false);
     const [gitData, setGitData] = useState([]);
     const apiurl = "https://api.github.com/user/repos"
-    const apikey = `Bearer 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`
+    const apikey = `Bearer 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`
 
     useEffect(() => {
         const fetchData = async () => {
