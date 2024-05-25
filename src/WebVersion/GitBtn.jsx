@@ -9,15 +9,12 @@ import styled from '@emotion/styled';
 function MyDialog() {
     const [open, setOpen] = useState(false);
     const [gitData, setGitData] = useState([]);
-    const githubToken = process.env.GITHUBTOKEN;
-    const apiurl = "https://api.github.com/user/repos";
+    const apiurl = "https://api.github.com/cyrusmanosa/repos";
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await Axios.get(apiurl, {
-                    headers: { Authorization: `Bearer ${githubToken}` }
-                });
+                const response = await Axios.get(apiurl);
                 const filteredData = response.data
                     .filter((repo) => repo.private === false)
                     .filter((repo) => repo.owner.login === "cyrusmanosa")
