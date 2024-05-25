@@ -9,7 +9,7 @@ import styled from '@emotion/styled';
 function MyDialog() {
     const [open, setOpen] = useState(false);
     const [gitData, setGitData] = useState([]);
-    const githubToken = process.env.GITHUB_TOKEN; // 从环境变量中读取 GitHub token
+    const githubToken = process.env.GITHUBTOKEN;
     const apiurl = "https://api.github.com/user/repos";
 
     useEffect(() => {
@@ -32,14 +32,13 @@ function MyDialog() {
             }
         };
         fetchData();
-    }, [githubToken]); // 仅在 githubToken 发生变化时重新获取数据
+    });
 
     const HandleOpenUrl = (url) => {
         window.open(url, "_blank");
         setOpen(false);
     };
 
-    // Styled component for the button
     const GitBtn = styled(Button)`
         display: flex;
         text-align: center;
