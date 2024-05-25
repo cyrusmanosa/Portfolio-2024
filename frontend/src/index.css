@@ -59,3 +59,28 @@ body {
 .intro-TcAndJa-line-height {
   line-height: 150%;
 }
+
+/* ------------------- IT ------------------- */
+.DialogStyle {
+  font-family: "Paytone One", sans-serif;
+  font-style: normal;
+  text-align: center;
+  font-size: 130%;
+}
+.DialogContentStyle {
+  margin: 0.1%;
+  width: 200px;
+  button {
+    text-transform: capitalize;
+    margin: 1%;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+    background-color: transparent;
+  }
+}
+
+.DialogContentStyle button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}

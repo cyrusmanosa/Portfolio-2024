@@ -3,26 +3,29 @@
     "title": "Portfolio Ver.2",
     "country": "HongKonger",
     "location": "Osaka",
-    "itemIntro": "INTRODUCE",
+    "itemIntro": "SUMMARY",
     "hobby": "Photography , Hiking",
     "cv":"https://drive.google.com/file/d/1z4_UlXsHE1ApHwa6zHDFoAfKNkmkQRoX/view?usp=drive_link",
     "intro": "Cyrus is an aspiring Web Full Stack Engineer currently studying IT in Osaka,Japan,with an anticipated graduation date of March 2025. Prior to his foray into IT,Cyrus worked in the video production industry as a video editor, photographer and multimedia designer, specializing in visual media and commercial video production.",
     "companyList": {
         "sjm":{
             "s_conpanyName": "SJM（Macao）",
+            "s_workTitle":"Senior Multimedia Designer",
             "s_timeRange": "2018/09 - 2020/04",
             "s_p1": "Event video shooting to edit highlight video.",
             "s_p2": "Created new video to update channel of company.",
             "s_p3": "Created the TVC for the company event."
         },
         "fhia":{
-            "f_conpanyName": "Ahct Group - FHIA（Macao）",
+            "f_conpanyName": "AhctGroup - FHIA（Macao）",
+            "f_workTitle": "Product Photographer",
             "f_timeRange": "2017/03 - 2018/03",
             "f_p1": "Promotion video and event photos shooting.",
             "f_p2": "Created motion graphic video of promotion."
         },
         "autoEdit":{
             "a_conpanyName": "AutoEdit.Ltd（Hong Kong）",
+            "a_workTitle":"Production Assistant",
             "a_timeRange": "2016/09 - 2017/02",
             "a_p1": "Advertising and event video shooting.",
             "a_p2": "Promotion video and event photos shooting."

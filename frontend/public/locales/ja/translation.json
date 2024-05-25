@@ -10,6 +10,7 @@
     "companyList":{
         "sjm":{
             "js_conpanyName": "AutoEdit.Ltd（香港）",
+            "js_workTitle":"シニア動画編集者",
             "js_timeRange": "2016/09 - 2017/02",
 
             "js_titlep1": "【担当フェーズ】",
@@ -30,6 +31,7 @@
         },
         "fhia":{
             "jf_conpanyName": "Ahct Group - FHIA（マカオ）",
+            "jf_workTitle":"商品の写真家",
             "jf_timeRange": "2017/03 - 2018/03",
 
             "jf_titlep1": "【担当フェーズ】",
@@ -50,6 +52,7 @@
         },
         "autoEdit":{
             "ja_conpanyName": "SJM Macao（マカオ）",
+            "ja_workTitle":"動画制作アシスタント",
             "ja_timeRange": "2018/09 - 2020/04",
 
             "ja_titlep1": "【担当フェーズ】",

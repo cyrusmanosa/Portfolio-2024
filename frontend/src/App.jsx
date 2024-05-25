@@ -1,11 +1,10 @@
 import styled from '@emotion/styled'
-import Part1 from "./Part1"
-import Part2 from "./Part2"
-import Part3 from "./Part3"
-import Axios from "axios";
+import Part1 from "./WebVersion/WPart1"
+import Part2 from "./WebVersion/WPart2"
+import Part3 from "./WebVersion/WPart3"
+import Phone from "./PhoneVersion/PhoneVer"
 
 function App() {
-
   const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(6, auto);
@@ -34,28 +33,25 @@ function App() {
       width: 65%;
     }
   `
-  Axios.get("https://api.github.com/user/repos", {
-    headers: {
-      Authorization: "Bearer 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",
-    },
-  })
-    // .then((response) => {
-    //   console.log(response.data);
-    // })
-    .catch((error) => {
-      console.error(error);
-    });
+  const minWidth800px = window.matchMedia("(min-width: 800px)").matches;
 
-
-  return (
-    <>
-      <Container>
-        <Part1 />
-        <Part2 />
-        <Part3 />
-      </Container>
-    </>
-  )
+  if (minWidth800px) {
+    return (
+      <>
+        <Container>
+          <Part1 />
+          <Part2 />
+          <Part3 />
+        </Container>
+      </>
+    )
+  } else {
+    return (
+      <>
+        <Phone />
+      </>
+    );
+  }
 }
 
 export default App

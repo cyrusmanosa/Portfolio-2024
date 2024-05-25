@@ -10,6 +10,7 @@
     "companyList": {
         "sjm":{
             "s_conpanyName": "澳博（澳門）",
+            "s_workTitle":"資深多媒體設計師",
             "s_timeRange": "2018/09 - 2020/04",
             "s_p1": "拍攝公司活動並剪輯花絮",
             "s_p2": "為線上推廣平台創作新概念系列",
@@ -17,12 +18,14 @@
         },
         "fhia":{
             "f_conpanyName": "Ahct Group - FHIA（澳門）",
+            "f_workTitle":"產品攝影師",
             "f_timeRange": "2017/03 - 2018/03",
             "f_p1": "拍攝產品相片及活動花絮",
             "f_p2": "製作產品特效宣傳影片"
         },
         "autoEdit": {
             "a_conpanyName": "AutoEdit.Ltd（香港）",
+            "a_workTitle":"影片製作助理",
             "a_timeRange": "2016/09 - 2017/02",
             "a_p1": "後期影片編輯 ",
             "a_p2": "拍攝商業廣告、活動花絮及宣傳影片"
