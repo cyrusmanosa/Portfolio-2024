@@ -33,7 +33,7 @@
     },
     "portfolio":{
         "year1":{
-            "y1title": "一年級 - 作品集網站",
+            "y1title": "一年級 - 作品集網站2022",
             "y1msg": "這個作品集網站是我在Vtc畢業前使用WIX製作的。大阪Ecc電腦學校就讀時，一年級所學習的HTML、CSS和JavaScript，並使用Firebase Hosting進行管理。"
         },
         "year2":{
@@ -48,6 +48,10 @@
             "y2front": "前端",
             "y2back": "後端",
             "y2db": "數據庫"
+        },
+        "year3":{
+            "y3title": "三年級 - 作品集網站2024",
+            "y3msg": "呢個網站"
         }
     }
 }

@@ -55,7 +55,7 @@ function WPart2() {
             } else {
                 switch (i18n.language) {
                     case 'en':
-                        pc2Element.style.height = '1250px';
+                        pc2Element.style.height = '1350px';
                         break;
                     case 'zh':
                         pc2Element.style.height = '1200px';
@@ -84,37 +84,37 @@ function WPart2() {
         if (match1350) {
             switch (i18n.language) {
                 case 'en':
-                    pc3Element.style.height = '2350px';
+                    pc3Element.style.height = '2550px';
                     break;
                 case 'zh':
-                    pc3Element.style.height = '2300px';
+                    pc3Element.style.height = '2500px';
                     break;
                 case 'ja':
-                    pc3Element.style.height = '2350px';
+                    pc3Element.style.height = '2550px';
                     break;
             }
         } else if (match950) {
             switch (i18n.language) {
                 case 'en':
-                    pc3Element.style.height = '2200px';
+                    pc3Element.style.height = '2400px';
                     break;
                 case 'zh':
-                    pc3Element.style.height = '2100px';
+                    pc3Element.style.height = '2300px';
                     break;
                 case 'ja':
-                    pc3Element.style.height = '2200px';
+                    pc3Element.style.height = '2400px';
                     break;
             }
         } else {
             switch (i18n.language) {
                 case 'en':
-                    pc3Element.style.height = '2250px';
+                    pc3Element.style.height = '2300px';
                     break;
                 case 'zh':
                     pc3Element.style.height = '2300px';
                     break;
                 case 'ja':
-                    pc3Element.style.height = '2300px';
+                    pc3Element.style.height = '2350px';
                     break;
             }
         }
@@ -162,7 +162,7 @@ function WPart2() {
         } else {
             switch (i18n.language) {
                 case 'en':
-                    pc3Element.style.height = '1250px';
+                    pc3Element.style.height = '1350px';
                     break;
                 case 'zh':
                     pc3Element.style.height = '1200px';

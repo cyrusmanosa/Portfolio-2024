@@ -12,22 +12,21 @@ import I8 from '../assets/App/DatingDate/08.png';
 import styled from '@emotion/styled';
 import GitBtn from './GitBtn'
 
-//  Year 1
-const Year1Div = styled.div`
+const Opus = styled.div`
     text-align: center;
     background-color: #fff;
     padding: 20px;
     width: 75%;
     margin: 3% auto;
     border-radius: 10px;
-    img {
-      margin: 20px auto;
-      padding: 10px;
-      background-color: white;
-      border: 2px solid #000;
-      border-radius: 10px;
-    }
-    
+`
+//  Year 1
+const Year1Img = styled.img`
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 10px;
 `
 const TitleH2 = styled.h2`
     margin: 2.5% 0 3.5% 0;
@@ -40,14 +39,6 @@ const Year1Msg = styled.p`
 `
 
 // Year 2
-const Year2Div = styled.div`
-    background-color: #fff;
-    text-align: center;
-    width: 75%;
-    margin: 3% auto;
-    border-radius: 10px;
-    padding: 20px;
-`
 const Year2P2Title = styled.div`
     background-color: #ff83a8;
     width: 75%;
@@ -150,6 +141,13 @@ const Intro = styled.p`
     color: black;
 `
 
+// Year 3
+const Year3Msg = styled.p`
+      text-align: center;
+      width: 85%;
+      margin: 0 auto 20px auto;
+      font-size: 18px;
+`
 
 function WIt() {
     const { t, i18n } = useTranslation();
@@ -160,21 +158,22 @@ function WIt() {
         y2title2, y2intro2a, y2intro2b,
         y2title3, y2front, y2back, y2db
     } = t("portfolio.year2");
+    const { y3title, y3msg } = t("portfolio.year3");
     return (
         <>
             {/* github Btn */}
             <GitBtn />
             {/* Year 1 */}
-            <Year1Div className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""}>
+            <Opus className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""}>
                 <TitleH2>{y1title}</TitleH2>
-                <img src={Original} width="70%" alt="Year 1 Portfolio" />
+                <Year1Img src={Original} width="70%" alt="Year 1 Portfolio" />
                 <Year1Msg>
                     {y1msg}
                 </Year1Msg>
-            </Year1Div>
+            </Opus>
 
             {/* Year 2 */}
-            <Year2Div className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""}>
+            <Opus className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""}>
                 <TitleH2>{y2title}</TitleH2>
                 <Year2P1>
                     <div className="item">
@@ -231,7 +230,15 @@ function WIt() {
                         </table>
                     </Software>
                 </Year2P2>
-            </Year2Div>
+            </Opus>
+
+            {/* Year 3 */}
+            <Opus className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""}>
+                <TitleH2>{y3title}</TitleH2>
+                <Year3Msg>
+                    {y3msg}
+                </Year3Msg>
+            </Opus>
         </>
     );
 }
