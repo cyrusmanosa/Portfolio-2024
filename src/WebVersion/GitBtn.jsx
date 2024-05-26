@@ -18,6 +18,7 @@ function MyDialog() {
                     .filter((repo) => repo.private === false)
                     .filter((repo) => repo.owner.login === "cyrusmanosa")
                     .filter((repo) => repo.name !== "cyrusmanosa")
+                    .filter((repo) => repo.fork === false)
                     .map((repo) => ({
                         name: repo.name,
                         html_url: repo.html_url,

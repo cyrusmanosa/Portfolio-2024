@@ -3,7 +3,6 @@ import Part1 from "./WebVersion/WPart1"
 import Part2 from "./WebVersion/WPart2"
 import Part3 from "./WebVersion/WPart3"
 import Phone from "./PhoneVersion/PhoneVer"
-
 function App() {
   const Container = styled.div`
     display: grid;
@@ -34,7 +33,6 @@ function App() {
     }
   `
   const minWidth800px = window.matchMedia("(min-width: 800px)").matches;
-
   if (minWidth800px) {
     return (
       <>
