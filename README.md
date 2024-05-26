@@ -1,5 +1,8 @@
 # Portfolio 2024
 
+## Website Version And Phone Version
+<img width="700" alt="SCR-20230502-nedr" src="https://github.com/cyrusmanosa/Portfolio-2024/blob/255f9a8d00231550a6b5de6bf892cda6bcfb7fe9/src/assets/WebVersion.png"><img width="199.5" alt="SCR-20230502-nedr" src="https://github.com/cyrusmanosa/Portfolio-2024/blob/255f9a8d00231550a6b5de6bf892cda6bcfb7fe9/src/assets/PhoneVersion.png">
+
 ## Introduction
 A more detailed introduction to your project.
 
