@@ -13,7 +13,6 @@ function PPart4() {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding-bottom: 2%;
     `
     const Icon = styled.a`
         display: flex;
@@ -32,11 +31,17 @@ function PPart4() {
         display:grid;
         justify-content:center;
         text-align:center;
-        padding: 7% 0 10% 0 ;
+        padding-bottom: 10%;
         p{
             margin: -1%;
             padding: 0;
+            font-size:90%;
         }
+    `
+    const Message = styled.p`
+        text-align:center;
+        margin: 0;
+        padding-top: 5%;
     `
     return (
         <>
@@ -48,9 +53,9 @@ function PPart4() {
                 <Icon href="https://www.wantedly.com/id/CyrusMan" target="_blank" rel="noopener noreferrer"><SiWantedly /></Icon>
                 <Icon href={t("cv")} target="_blank"><IoDocumentText /></Icon>
             </Sns>
+            <Message>Have a nice day!!</Message>
             <Copyright>
-                <p>Copyright&nbsp;&copy;&nbsp;{currentYear}&nbsp;Cyrus Man.</p>
-                <p>All rights reserved.</p>
+                Copyright&nbsp;&copy;&nbsp;{currentYear}&nbsp;Cyrus Man.&nbsp;All rights reserved.
             </Copyright>
         </>
     );
