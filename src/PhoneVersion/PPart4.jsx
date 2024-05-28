@@ -1,62 +1,88 @@
-import { FaGithub, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { IoDocumentText } from "react-icons/io5";
-import { SiWantedly } from "react-icons/si";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next'
 import styled from '@emotion/styled'
+
 
 function PPart4() {
     const { t } = useTranslation();
-    const currentYear = new Date().getFullYear();
 
-    const Sns = styled.div`
+    const Line = styled.hr`
+        margin:0 5% 5% 5%;
+        border: 1px dashed #000;
+    `
+    const WorkExpTitle = styled.div`
         display: flex;
-        flex-direction: row;
-        align-items: center;
         justify-content: center;
+        margin:0 5%;
+        h4{
+            margin-bottom:0;
+            text-transform: uppercase;
+        }
     `
-    const Icon = styled.a`
+    const Company = styled.div`
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        font-size: 175%;
-        text-decoration: none;
-        margin: 0 2%;
-        &:link,
-        &:visited,
-        &:hover,
-        &:active {
-            color: #000;
-        }
+        margin:5%;
     `
-    const Copyright = styled.small`
-        display:grid;
-        justify-content:center;
-        text-align:center;
-        padding-bottom: 10%;
+    const NameTitle = styled.div`
+        display: grid;
+        row-gap: 0;
+        flex-direction: column;
         p{
-            margin: -1%;
-            padding: 0;
-            font-size:90%;
+            margin:-2% 0;
+            padding:0;
+            font-size:80%;
         }
     `
-    const Message = styled.p`
-        text-align:center;
-        margin: 0;
-        padding-top: 5%;
+    const CompanyTitle = styled.h3`
+        margin:0;
+        padding:0;
+        font-size:80%;
     `
+    const TimeRange = styled.div`
+        margin:0;
+        padding:0;
+        font-size:80%;
+    `
+
+    const { s_conpanyName, s_workTitle, s_timeRange } = t("companyList.sjm");
+    const { f_conpanyName, f_workTitle, f_timeRange } = t("companyList.fhia");
+    const { a_conpanyName, a_workTitle, a_timeRange } = t("companyList.autoEdit");
+
+
     return (
         <>
-            <Sns>
-                <Icon href="https://github.com/cyrusmanosa" target="_blank" rel="noopener noreferrer"><FaGithub /></Icon>
-                <Icon href="https://www.facebook.com/man.chun.779/" target="_blank" rel="noopener noreferrer"><FaFacebook /></Icon>
-                <Icon href="https://www.instagram.com/cyrus_mkc/" target="_blank" rel="noopener noreferrer"><FaInstagram /></Icon>
-                <Icon href="https://www.linkedin.com/in/cyrusmanmkc" target="_blank" rel="noopener noreferrer"><FaLinkedin /></Icon>
-                <Icon href="https://www.wantedly.com/id/CyrusMan" target="_blank" rel="noopener noreferrer"><SiWantedly /></Icon>
-                <Icon href={t("cv")} target="_blank"><IoDocumentText /></Icon>
-            </Sns>
-            <Message>Have a nice day!!</Message>
-            <Copyright>
-                Copyright&nbsp;&copy;&nbsp;{currentYear}&nbsp;Cyrus Man.&nbsp;All rights reserved.
-            </Copyright>
+            <WorkExpTitle>
+                <h4>Work&emsp;Experience</h4>
+            </WorkExpTitle>
+            <Line />
+            {/* AutoEdit */}
+            <Company>
+                <NameTitle>
+                    <CompanyTitle>{a_conpanyName}</CompanyTitle>
+                    <p>{a_workTitle}</p>
+                </NameTitle>
+                <TimeRange>{a_timeRange}</TimeRange>
+            </Company>
+
+            {/* AHct-Flha */}
+            <Company>
+                <NameTitle>
+                    <CompanyTitle>{f_conpanyName}</CompanyTitle>
+                    <p>{f_workTitle}</p>
+                </NameTitle>
+                <TimeRange>{f_timeRange}</TimeRange>
+            </Company>
+
+            {/* SJM */}
+            <Company>
+                <NameTitle>
+                    <CompanyTitle>{s_conpanyName}</CompanyTitle>
+                    <p>{s_workTitle}</p>
+                </NameTitle>
+                <TimeRange>{s_timeRange}</TimeRange>
+            </Company>
+            <Line />
         </>
     );
 }

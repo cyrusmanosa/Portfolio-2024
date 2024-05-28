@@ -31,6 +31,16 @@
             "a_p2": "Promotion video and event photos shooting."
         }
     },
+    "eduction":{
+        "japanese":{
+            "sj_name":"ECC Kokusai College Of Foreign Languages",
+            "sj_timeRange":"2020/10 - 2022/03"
+        },
+        "it":{
+            "si_name":"ECC College Of Computer and Multimedia",
+            "si_timeRange":"2022/04 - 2025/03"
+        }
+    },
     "portfolio": {
         "year1":{
             "y1title": "Year1 - Portfolio 2022 Website",
