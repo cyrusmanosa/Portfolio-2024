@@ -10,7 +10,7 @@ function phone() {
     const Bg = styled.div`
         background-color:#fff;
         margin:0 auto;
-        width: 85%;
+        width: 90%;
     `
     const PartStyle = styled.div`
         margin:7% 0;
