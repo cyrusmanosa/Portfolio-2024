@@ -10,9 +10,11 @@ import ItBG from '../assets/3FE099FF-4660-4E8C-9E3B-B779A50EAC65_1_105_c.jpeg';
 import Tc from './Wtimeline'
 import It from "./WIt"
 import styled from "@emotion/styled";
+import { useState } from "react";
 
 function WPart2() {
     const { t, i18n } = useTranslation();
+    const [c2switch, setC2Switch] = useState(false)
     // JS c2
     let previousMousePosition = null;
     const C2HandleOnMouseEnter = (event) => {
@@ -65,15 +67,15 @@ function WPart2() {
                         break;
                 }
             }
-            const extendElement = document.getElementById("extend");
-            const root = createRoot(extendElement);
-            root.render(<Tc />);
         }
         previousMousePosition = { x: event.clientX, y: event.clientY };
+        setC2Switch(true);
+
         const pc3Element = document.getElementById("pc3");
         pc3Element.addEventListener("mouseenter", C3HandleOnMouseEnter)
         pc3Element.addEventListener("mouseleave", C3HandleOnMouseLeave)
     };
+
     // JS c3
     const C3HandleOnMouseEnter = () => {
         const pc3Element = document.getElementById('pc3');
@@ -325,7 +327,11 @@ function WPart2() {
                 <IntroduceData className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700 intro-TcAndJa-line-height " : "intro-Eng-line-height"}>{t("intro")}</IntroduceData>
 
                 {/* Extend */}
-                <div id="extend"></div>
+                {c2switch ? (
+                    <div id="extend"><Tc /></div>
+                ) : (
+                    <div id="extend"></div>
+                )}
             </C2 >
 
             {/* C3 */}
