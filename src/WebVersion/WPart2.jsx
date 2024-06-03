@@ -5,16 +5,17 @@ import { FaBirthdayCake } from "react-icons/fa";
 import { IoHeart } from "react-icons/io5";
 import { createRoot } from 'react-dom/client';
 import { useTranslation } from 'react-i18next'
+import { useState, useEffect } from "react";
 import PortfoiloImg from '../assets/Portfoilo.jpeg'
 import ItBG from '../assets/3FE099FF-4660-4E8C-9E3B-B779A50EAC65_1_105_c.jpeg';
 import Tc from './Wtimeline'
 import It from "./WIt"
 import styled from "@emotion/styled";
-import { useState } from "react";
 
 function WPart2() {
     const { t, i18n } = useTranslation();
     const [c2switch, setC2Switch] = useState(false)
+
     // JS c2
     let previousMousePosition = null;
     const C2HandleOnMouseEnter = (event) => {
@@ -76,6 +77,61 @@ function WPart2() {
         pc3Element.addEventListener("mouseleave", C3HandleOnMouseLeave)
     };
 
+    //----------------------------------------------------------------
+    useEffect(() => {
+        const handleLanguageChange = (lng) => {
+            setC2Switch(false);
+            const pc2Element = document.getElementById("pc2");
+            if (!pc2Element) return;
+
+            const match1350 = window.matchMedia("(min-width: 1350px)").matches;
+            const match850 = window.matchMedia("(min-width: 850px)").matches;
+            if (match1350) {
+                switch (lng) {
+                    case 'en':
+                        pc2Element.style.height = '1150px';
+                        break;
+                    case 'zh':
+                        pc2Element.style.height = '1100px';
+                        break;
+                    case 'ja':
+                        pc2Element.style.height = '2050px';
+                        break;
+                }
+            } else if (match850) {
+                switch (lng) {
+                    case 'en':
+                        pc2Element.style.height = '1250px';
+                        break;
+                    case 'zh':
+                        pc2Element.style.height = '1100px';
+                        break;
+                    case 'ja':
+                        pc2Element.style.height = '2150px';
+                        break;
+                }
+            } else {
+                switch (lng) {
+                    case 'en':
+                        pc2Element.style.height = '1350px';
+                        break;
+                    case 'zh':
+                        pc2Element.style.height = '1200px';
+                        break;
+                    case 'ja':
+                        pc2Element.style.height = '2300px';
+                        break;
+                }
+            }
+        };
+
+        i18n.on('languageChanged', handleLanguageChange);
+
+        return () => {
+            i18n.off('languageChanged', handleLanguageChange);
+        };
+    }, [i18n]);
+    //----------------------------------------------------------------
     // JS c3
     const C3HandleOnMouseEnter = () => {
         const pc3Element = document.getElementById('pc3');
@@ -316,7 +372,7 @@ function WPart2() {
                         </DataItem>
                     </DataPart>
                     {/* pic */}
-                    <Pfimg src={PortfoiloImg} alt="Img" className="PortfoiloImg" />
+                    <Pfimg src={PortfoiloImg} alt="Img" className="PortfoiloImg" onMouseEnter={C2HandleOnMouseEnter} />
                 </Horizontal>
 
                 {/* Introduce */}
