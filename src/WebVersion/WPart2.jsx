@@ -132,6 +132,7 @@ function WPart2() {
         };
     }, [i18n]);
     //----------------------------------------------------------------
+
     // JS c3
     const C3HandleOnMouseEnter = () => {
         const pc3Element = document.getElementById('pc3');
@@ -142,37 +143,37 @@ function WPart2() {
         if (match1350) {
             switch (i18n.language) {
                 case 'en':
-                    pc3Element.style.height = '2550px';
+                    pc3Element.style.height = '2600px';
                     break;
                 case 'zh':
-                    pc3Element.style.height = '2500px';
+                    pc3Element.style.height = '2550px';
                     break;
                 case 'ja':
-                    pc3Element.style.height = '2550px';
+                    pc3Element.style.height = '2600px';
                     break;
             }
         } else if (match950) {
             switch (i18n.language) {
                 case 'en':
-                    pc3Element.style.height = '2400px';
+                    pc3Element.style.height = '2450px';
                     break;
                 case 'zh':
-                    pc3Element.style.height = '2300px';
+                    pc3Element.style.height = '2350px';
                     break;
                 case 'ja':
-                    pc3Element.style.height = '2400px';
+                    pc3Element.style.height = '2450px';
                     break;
             }
         } else {
             switch (i18n.language) {
                 case 'en':
-                    pc3Element.style.height = '2300px';
+                    pc3Element.style.height = '2350px';
                     break;
                 case 'zh':
-                    pc3Element.style.height = '2300px';
+                    pc3Element.style.height = '2350px';
                     break;
                 case 'ja':
-                    pc3Element.style.height = '2350px';
+                    pc3Element.style.height = '2400px';
                     break;
             }
         }

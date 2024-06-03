@@ -145,8 +145,8 @@ const Intro = styled.p`
 const Year3Msg = styled.p`
       text-align: center;
       width: 85%;
-      margin: 0 auto 20px auto;
-      font-size: 18px;
+      margin: 0 auto 15px auto;
+      font-size: 16px;
 `
 
 function WIt() {

@@ -63,7 +63,7 @@
         },
         "year3":{
             "y3title": "Year3 - Portfolio 2024 Website",
-            "y3msg":"This website"
+            "y3msg":"I have created a portfolio website by self-learning React. Compared to Version 1, this version has significant changes in UI/UX and includes animations to display the content. I also made a mobile version, which is simpler in display compared to the desktop version. Currently, it is hosted on Vercel with integration to GitHub."
         }
     }
 }
