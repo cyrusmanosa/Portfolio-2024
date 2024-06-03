@@ -1,7 +1,11 @@
 # Portfolio 2024
 
-### Website Version And Phone Version
-<img width="700" alt="SCR-20230502-nedr" src="https://github.com/cyrusmanosa/Portfolio-2024/blob/255f9a8d00231550a6b5de6bf892cda6bcfb7fe9/src/assets/WebVersion.png"><img width="199.5" alt="SCR-20230502-nedr" src="https://github.com/cyrusmanosa/Portfolio-2024/blob/255f9a8d00231550a6b5de6bf892cda6bcfb7fe9/src/assets/PhoneVersion.png">
+### Website Version
+<img width="500" alt="SCR-20230502-nedr" src="src/assets/WebVersion1.png"><img width="463.8" alt="SCR-20230502-nedr" src="src/assets/WebVersion2.png">
+<img width="450" alt="SCR-20230502-nedr" src="src/assets/WebVersion3.png">
+
+### Phone Version
+<img width="199.5" alt="SCR-20230502-nedr" src="https://github.com/cyrusmanosa/Portfolio-2024/blob/255f9a8d00231550a6b5de6bf892cda6bcfb7fe9/src/assets/PhoneVersion.png">
 
 ## Introduction
 This 2024 portfolio integrates with the GitHub API to showcase repository items in a website dialog. Its simple and user-friendly interface (UI/UX) is presented on a single page.
