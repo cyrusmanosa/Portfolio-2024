@@ -54,7 +54,6 @@ function PPart5() {
                 <Icon href={t("cv")} target="_blank"><IoDocumentText /></Icon>
             </Sns>
             <Message>Have a nice day!!</Message>
-            <a href="tel:08094176170">Phone</a>
             <Copyright>
                 Copyright&nbsp;&copy;&nbsp;{currentYear}&nbsp;Cyrus Man.&nbsp;All rights reserved.
             </Copyright>
