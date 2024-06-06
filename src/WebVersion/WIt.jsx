@@ -109,7 +109,7 @@ const Year2P1 = styled.div`
             }
         }
     }
-    `
+`
 const Year2P1Title = styled.div`
     h1 {
         color: #4f4f4f;

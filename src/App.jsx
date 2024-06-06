@@ -32,6 +32,7 @@ function App() {
       width: 65%;
     }
   `
+
   const minWidth800px = window.matchMedia("(min-width: 800px)").matches;
   if (minWidth800px) {
     return (
