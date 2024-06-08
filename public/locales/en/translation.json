@@ -44,7 +44,7 @@
     "portfolio": {
         "year1":{
             "y1title": "Year1 - Portfolio 2022 Website",
-            "y1msg": "This portfolio website was created using Wix before I graduated from Vtc in Hong Kong. It was developed using the HTML, CSS, and JavaScript that I learned in my first year at Osaka Ecc Computer School, and is managed using Firebase Hosting."
+            "y1msg": "This portfolio website was created during my first year at Osaka ECC Computer School, where I learned HTML, CSS, and JavaScript, and managed it using Firebase Hosting."
         },
         "year2":{
             "y2title": "Year2 - Individual Creation Project",
