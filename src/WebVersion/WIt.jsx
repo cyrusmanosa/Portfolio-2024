@@ -159,6 +159,7 @@ function WIt() {
         y2title3, y2front, y2back, y2db
     } = t("portfolio.year2");
     const { y3title, y3msg } = t("portfolio.year3");
+
     return (
         <>
             {/* github Btn */}
