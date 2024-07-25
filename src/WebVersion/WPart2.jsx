@@ -34,7 +34,7 @@ function WPart2() {
             if (match1350) {
                 switch (i18n.language) {
                     case 'en':
-                        pc2Element.style.height = '1150px';
+                        pc2Element.style.height = '1200px';
                         break;
                     case 'zh':
                         pc2Element.style.height = '1100px';
