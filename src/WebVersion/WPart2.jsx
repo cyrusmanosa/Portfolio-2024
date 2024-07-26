@@ -15,11 +15,20 @@ function WPart2() {
     const { t, i18n } = useTranslation();
     const [c2switch, setC2Switch] = useState(false)
     const [checkC3, setCheckC3] = useState(false)
-
-    const S1PxSize = {
-        "en": { 1350: '1200px', 850: '1250px', other: '1350px' },
-        "zh": { 1350: '1100px', 850: '1100px', other: '1200px' },
-        "ja": { 1350: '2000px', 850: '2100px', other: '2250px' }
+    const ratio = Math.round((window.outerWidth / window.innerWidth) * 100);
+    let S1PxSize = {}
+    if (ratio < 125) {
+        S1PxSize = {
+            "en": { 1350: '1200px', 850: '1250px', other: '1350px' },
+            "zh": { 1350: '1100px', 850: '1100px', other: '1200px' },
+            "ja": { 1350: '2000px', 850: '2100px', other: '2250px' }
+        }
+    } else {
+        S1PxSize = {
+            "en": { 1350: '1250px', 850: '1300px', other: '1400px' },
+            "zh": { 1350: '1150px', 850: '1150px', other: '1250px' },
+            "ja": { 1350: '2050px', 850: '2150px', other: '2300px' }
+        }
     }
 
     // JS c2
