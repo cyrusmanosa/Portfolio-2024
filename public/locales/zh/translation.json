@@ -7,6 +7,10 @@
     "hobby": "攝影 , 行山",
     "cv":"https://drive.google.com/file/d/1z4_UlXsHE1ApHwa6zHDFoAfKNkmkQRoX/view?usp=sharing",
     "intro": "目前正在日本大阪攻讀 IT 相關課程，目標是成為一位有Web 全端工程師。預計 2025 年 3 月畢業。在進入 IT 領域之前，Cyrus 在影片製作行業擔任影片剪輯師、攝影師和多媒體設計師，專精於視覺媒體和商業影片製作。",
+    "frontTitle": "前端",
+    "backTitle": "後端",
+    "dbTitle": "數據庫",
+    "otherTitle": "其他",
     "companyList": {
         "sjm":{
             "s_conpanyName": "澳博（澳門）",
@@ -42,16 +46,25 @@
             "y2intro1b": "Dating Date",
             "y2intro1c": "在這裡找到你的命中註定",
             "y2title2": "創新的配對系統",
-            "y2intro2a": "Dating Date 不再是基於傳統的個人資料或滑動配對，而是根據共同的興趣和愛好來回答問題，以找到最適合您的伴侶。",
+            "y2intro2a": "Dating Date 不再是基於傳統的個人資料或滑動配對，而是根據共同的興趣和愛好來設定，以找到最適合您的伴侶。",
             "y2intro2b": "您可以通過數據庫條件匹配積極尋找最多 3 個匹配機會的用戶，並且匹配機會無限。",
-            "y2title3": "本地系統",
-            "y2front": "前端",
-            "y2back": "後端",
-            "y2db": "數據庫"
+            "y2title3": "本地系統"
         },
         "year3":{
-            "y3title": "三年級 - 作品集網站2024",
-            "y3msg": "從網上學習React並製作了個人作品集網站。與第一版相比，這次的UI/UX有了很大的變化，並且加入了動畫效果來顯示內容。我還製作了手機版本，相比電腦版本，手機版本的顯示更加簡潔。目前，我通過Vercel將其與Github連接並進行託管。"
+            "portfolio2024":{
+                "y3p_title": "三年級 - 作品集網站2024",
+                "y3p_intro": "從網上學習React並製作了個人作品集網站。與第一版相比，這次的UI/UX有了很大的變化，並且加入了動畫效果來顯示內容。我還製作了手機版本，相比電腦版本，手機版本的顯示更加簡潔。目前，我通過Vercel將其與Github連接並進行託管。"
+            },
+            "careconnect": {
+                "y3c_title": "3年生 - 前期團隊製作",
+                "y3c_intro1": "Care Connect",
+                "y3c_intro2": "NFC緊急信息系統",
+                "y3c_intro3": "使用NFC技術在緊急情況下迅速通知救護人員和家屬，並提供患者信息。這樣可以將障礙者的數據數字化，並在定期檢查時簡單訪問數據，大大提高了便利性。",
+                "y3c_title3": "線上系統",
+                "y3c_workloadTitle": "這個作品的負責部分",
+                "y3c_workload": "React.js、Go支援、畫面設計、AWS構建"
+            }
         }
     }
+
 }

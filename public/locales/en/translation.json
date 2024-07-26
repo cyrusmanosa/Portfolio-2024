@@ -7,6 +7,10 @@
     "hobby": "Photography , Hiking",
     "cv":"https://drive.google.com/file/d/1z4_UlXsHE1ApHwa6zHDFoAfKNkmkQRoX/view?usp=sharing",
     "intro": "Cyrus is an aspiring Web Full Stack Engineer currently studying IT in Osaka,Japan,with an anticipated graduation date of March 2025. Prior to his foray into IT,Cyrus worked in the video production industry as a video editor, photographer and multimedia designer, specializing in visual media and commercial video production.",
+    "frontTitle": "Frontend",
+    "backTitle": "Backend",
+    "dbTitle": "Database",
+    "otherTitle":"Other",
     "companyList": {
         "sjm":{
             "s_conpanyName": "SJM（Macao）",
@@ -56,14 +60,22 @@
             "y2intro2a": "Instead of traditional profiles and swiping, Dating Date uses a unique question-based system to find your perfect match based on shared interests and hobbies.",
             "y2intro2b": "Actively search for up to 3 matches by matching users based on criteria in the database. With Dating Date, there are endless possibilities for finding your perfect match.",
             
-            "y2title3": "LocalSystem",
-            "y2front": "FrontEnd",
-            "y2back": "BackEnd",
-            "y2db": "Database"
+            "y2title3": "Local System"
         },
         "year3":{
-            "y3title": "Year3 - Portfolio 2024 Website",
-            "y3msg":"I have created a portfolio website by self-learning React. Compared to Version 1, this version has significant changes in UI/UX and includes animations to display the content. I also made a mobile version, which is simpler in display compared to the desktop version. Currently, it is hosted on Vercel with integration to GitHub."
+            "portfolio2024":{
+                "y3p_title": "Year3 - Portfolio 2024 Website",
+                "y3p_intro":"I have created a portfolio website by self-learning React. Compared to Version 1, this version has significant changes in UI/UX and includes animations to display the content. I also made a mobile version, which is simpler in display compared to the desktop version. Currently, it is hosted on Vercel with integration to GitHub."
+            },
+            "careconnect": {
+                "y3c_title": "3rd Year - First Semester Team Project",
+                "y3c_intro1": "Care Connect",
+                "y3c_intro2": "NFC Emergency Information System",
+                "y3c_intro3": "Using NFC technology to quickly notify rescuers and family members in emergencies and provide patient information. This digitizes data for people with disabilities, allowing easy access to data during regular check-ups, greatly enhancing convenience.",
+                "y3c_title3": "Online System",
+                "y3c_workloadTitle": "Responsibilities for this project",
+                "y3c_workload": "React.js, Go support, screen design, AWS setup"
+            }
         }
     }
 }

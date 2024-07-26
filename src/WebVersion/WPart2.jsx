@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import PortfoiloImg from '../assets/Portfoilo.jpeg'
 import ItBG from '../assets/ItBg.jpeg';
 import Tc from './Wtimeline'
-import It from "./WIt"
+import It from "./IT/WIt"
 import styled from "@emotion/styled";
 
 function WPart2() {
@@ -19,7 +19,7 @@ function WPart2() {
     const S1PxSize = {
         "en": { 1350: '1200px', 850: '1250px', other: '1350px' },
         "zh": { 1350: '1100px', 850: '1100px', other: '1200px' },
-        "ja": { 1350: '2050px', 850: '2150px', other: '2300px' }
+        "ja": { 1350: '2000px', 850: '2100px', other: '2250px' }
     }
 
     // JS c2
@@ -48,28 +48,32 @@ function WPart2() {
 
     // JS c3
     const C3HandleOnMouseEnter = () => {
-        const pc3Element = document.getElementById('pc3');
-        const pc3ImgElement = document.getElementById('pc3-img');
-        pc3Element.style.height = '100%';
-        pc3Element.style.gridColumn = '1 / span 6';
-        pc3ImgElement.style.width = '100%';
-        pc3ImgElement.style.height = '200px';
-        document.getElementById('it-btn').style.margin = '0 0 3% 0';
-        setCheckC3(true)
-        setC2Switch(false)
+        setTimeout(() => {
+            const pc3Element = document.getElementById('pc3');
+            const pc3ImgElement = document.getElementById('pc3-img');
+            pc3Element.style.height = '100%';
+            pc3Element.style.gridColumn = '1 / span 6';
+            pc3ImgElement.style.width = '100%';
+            pc3ImgElement.style.height = '200px';
+            document.getElementById('it-btn').style.margin = '0 0 3% 0';
+            setCheckC3(true)
+            setC2Switch(false)
+        }, 300)
     }
 
     const C3HandleOnMouseLeave = () => {
-        const pc2Element = document.getElementById('pc2');
-        HandelPxSize(pc2Element, i18n.language, S1PxSize);
-        const pc3Element = document.getElementById('pc3');
-        const pc3ImgElement = document.getElementById('pc3-img');
-        HandelPxSize(pc3Element, i18n.language, S1PxSize);
-        pc3Element.style.gridColumn = '5 / span 2';
-        pc3ImgElement.style.width = '300px';
-        pc3ImgElement.style.height = '100%';
-        setC2Switch(true);
-        setCheckC3(false);
+        setTimeout(() => {
+            const pc2Element = document.getElementById('pc2');
+            HandelPxSize(pc2Element, i18n.language, S1PxSize);
+            const pc3Element = document.getElementById('pc3');
+            const pc3ImgElement = document.getElementById('pc3-img');
+            HandelPxSize(pc3Element, i18n.language, S1PxSize);
+            pc3Element.style.gridColumn = '5 / span 2';
+            pc3ImgElement.style.width = '300px';
+            pc3ImgElement.style.height = '100%';
+            setC2Switch(true);
+            setCheckC3(false);
+        }, 300)
     }
 
 
@@ -288,5 +292,3 @@ const IntroduceData = styled.div`
         font-size: 115%;
         width: 80%;
     `
-
-////////-------------------------------------------------------------------------------------------------   -   -   --
