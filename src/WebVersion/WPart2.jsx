@@ -197,7 +197,7 @@ function WPart2() {
         if (match1350) {
             switch (i18n.language) {
                 case 'en':
-                    pc3Element.style.height = '1150px';
+                    pc3Element.style.height = '1200px';
                     break;
                 case 'zh':
                     pc3Element.style.height = '1100px';
