@@ -48,8 +48,6 @@ function WPart2() {
 
     // JS c3
     const C3HandleOnMouseEnter = () => {
-        const pc2Element = document.getElementById('pc2');
-        pc2Element.style.height = '600px';
         const pc3Element = document.getElementById('pc3');
         const pc3ImgElement = document.getElementById('pc3-img');
         pc3Element.style.height = '100%';
@@ -63,17 +61,17 @@ function WPart2() {
 
     const C3HandleOnMouseLeave = () => {
         const pc2Element = document.getElementById('pc2');
-        HandelPxSize(pc2Element, i18n.language, S1PxSize)
-
+        HandelPxSize(pc2Element, i18n.language, S1PxSize);
         const pc3Element = document.getElementById('pc3');
         const pc3ImgElement = document.getElementById('pc3-img');
-        HandelPxSize(pc3Element, i18n.language, S1PxSize)
+        HandelPxSize(pc3Element, i18n.language, S1PxSize);
         pc3Element.style.gridColumn = '5 / span 2';
         pc3ImgElement.style.width = '300px';
         pc3ImgElement.style.height = '100%';
-        setC2Switch(true)
-        setCheckC3(false)
+        setC2Switch(true);
+        setCheckC3(false);
     }
+
 
     const HandelPxSize = (Element, lng, PxSize) => {
         const match1350 = window.matchMedia("(min-width: 1350px)").matches;
