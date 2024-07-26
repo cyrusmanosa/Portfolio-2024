@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from "react";
 import PortfoiloImg from '../assets/Portfoilo.jpeg'
 import ItBG from '../assets/ItBg.jpeg';
-import Tc from './WTimeline'
+import Tc from './Wtimeline'
 import It from "./WIt"
 import styled from "@emotion/styled";
 
@@ -291,5 +291,3 @@ const IntroduceData = styled.div`
         width: 80%;
     `
 
-
-///////----------------------------------------------------------------
