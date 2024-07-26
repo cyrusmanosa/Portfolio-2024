@@ -68,12 +68,12 @@ function WIt() {
                 <TitleH2>{y1title}</TitleH2>
                 {year1Data ?
                     (
-                        <>
+                        <ItemForShowArea>
                             <Year1Img src={Original} width="70%" alt="Year 1 Portfolio" />
                             <Year1Msg>
                                 {y1msg}
                             </Year1Msg>
-                        </>
+                        </ItemForShowArea>
                     ) : (
                         <ClickMsg>Click Me</ClickMsg>
                     )}
@@ -83,7 +83,7 @@ function WIt() {
             <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear2} style={{ height: `${year2H}px` }}>
                 <TitleH2>{y2title}</TitleH2>
                 {year2Data ? (
-                    <>
+                    <ItemForShowArea>
                         <Year2P1>
                             <div className="item">
                                 <img src={DD1} alt="Dating Date App" />
@@ -139,7 +139,7 @@ function WIt() {
                                 </table>
                             </Software>
                         </Year2P2>
-                    </>
+                    </ItemForShowArea>
                 ) : (
                     <ClickMsg>Click Me</ClickMsg>
                 )}
@@ -149,9 +149,11 @@ function WIt() {
             <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3} style={{ height: `${year3H}px` }}>
                 <TitleH2>{y3title}</TitleH2>
                 {year3Data ? (
-                    <Year3Msg>
-                        {y3msg}
-                    </Year3Msg>
+                    <ItemForShowArea>
+                        <Year3Msg>
+                            {y3msg}
+                        </Year3Msg>
+                    </ItemForShowArea>
                 ) : (
                     <ClickMsg>Click Me</ClickMsg>
                 )}
@@ -171,7 +173,16 @@ const ItemArea = styled.div`
     width: 75%;
     margin: 3% auto;
     border-radius: 10px;
-    animation: all 0.5s ease-in-out forwards;
+    transition: all 0.5s ease;
+`
+const ItemForShowArea = styled.div`
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+    @keyframes fadeIn {
+        to {
+            opacity: 1; 
+        }
+    }   
 `
 const ClickMsg = styled.p`
     margin: 0;

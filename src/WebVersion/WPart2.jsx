@@ -49,13 +49,11 @@ function WPart2() {
     // JS c3
     const C3HandleOnMouseEnter = () => {
         const pc2Element = document.getElementById('pc2');
+        pc2Element.style.height = '600px';
         const pc3Element = document.getElementById('pc3');
         const pc3ImgElement = document.getElementById('pc3-img');
-        pc3Element.style.gridColumn = '1 / span 6';
-
-        pc2Element.style.height = '600px';
         pc3Element.style.height = '100%';
-
+        pc3Element.style.gridColumn = '1 / span 6';
         pc3ImgElement.style.width = '100%';
         pc3ImgElement.style.height = '200px';
         document.getElementById('it-btn').style.margin = '0 0 3% 0';
@@ -194,8 +192,8 @@ export default WPart2;
 const C3 = styled.div`
         grid-column: 5 / span 2;
         grid-row: 2;
-        animation: all 0.5s ease-in-out forwards;
         z-index: 999;
+        animation: all 0.5s ease-in-out forwards;
     `
 const ImgBtn = styled.div`
         height: 100%;
