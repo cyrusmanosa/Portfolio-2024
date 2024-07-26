@@ -11,7 +11,7 @@ import I7 from '../assets/App/DatingDate/07.png';
 import I8 from '../assets/App/DatingDate/08.png';
 import styled from '@emotion/styled';
 import GitBtn from './GitBtn'
-
+import { useState } from "react";
 
 function WIt() {
     const { t, i18n } = useTranslation();
@@ -22,102 +22,159 @@ function WIt() {
         y2title2, y2intro2a, y2intro2b,
         y2title3, y2front, y2back, y2db
     } = t("portfolio.year2");
+
     const { y3title, y3msg } = t("portfolio.year3");
+    const [year1H, setYear1H] = useState(100)
+    const [year1Data, setYear1Data] = useState(false)
+    const [year2H, setYear2H] = useState(100)
+    const [year2Data, setYear2Data] = useState(false)
+    const [year3H, setYear3H] = useState(100)
+    const [year3Data, setYear3Data] = useState(false)
+
+    const HandleYear1 = () => {
+        if (year1H == 100) {
+            setYear1H(year1H + 450)
+            setYear1Data(true);
+        } else {
+            setYear1H(100)
+            setYear1Data(false);
+        }
+    }
+    const HandleYear2 = () => {
+        if (year2H == 100) {
+            setYear2H(year2H + 1300)
+            setYear2Data(true);
+        } else {
+            setYear2H(100)
+            setYear2Data(false);
+        }
+    }
+    const HandleYear3 = () => {
+        if (year3H == 100) {
+            setYear3H(year3H + 100)
+            setYear3Data(true);
+        } else {
+            setYear3H(100)
+            setYear3Data(false);
+        }
+    }
 
     return (
         <>
             {/* github Btn */}
             <GitBtn />
             {/* Year 1 */}
-            <Opus className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""}>
+            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear1} style={{ height: `${year1H}px` }}>
                 <TitleH2>{y1title}</TitleH2>
-                <Year1Img src={Original} width="70%" alt="Year 1 Portfolio" />
-                <Year1Msg>
-                    {y1msg}
-                </Year1Msg>
-            </Opus>
+                {year1Data ?
+                    (
+                        <>
+                            <Year1Img src={Original} width="70%" alt="Year 1 Portfolio" />
+                            <Year1Msg>
+                                {y1msg}
+                            </Year1Msg>
+                        </>
+                    ) : (
+                        <ClickMsg>Click Me</ClickMsg>
+                    )}
+            </ItemArea>
 
             {/* Year 2 */}
-            <Opus className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""}>
+            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear2} style={{ height: `${year2H}px` }}>
                 <TitleH2>{y2title}</TitleH2>
-                <Year2P1>
-                    <div className="item">
-                        <img src={DD1} alt="Dating Date App" />
-                    </div>
-                    <div className="item">
-                        <Year2P1Title>
-                            <h1>
-                                {y2intro1a}<br /><span>{y2intro1b}</span>{y2intro1c}
-                            </h1>
-                            <h3>{y2title2}</h3>
-                            <Intro>
-                                {y2intro2a}
-                            </Intro>
-                        </Year2P1Title>
-                    </div>
-                </Year2P1>
+                {year2Data ? (
+                    <>
+                        <Year2P1>
+                            <div className="item">
+                                <img src={DD1} alt="Dating Date App" />
+                            </div>
+                            <div className="item">
+                                <Year2P1Title>
+                                    <h1>
+                                        {y2intro1a}<br /><span>{y2intro1b}</span>{y2intro1c}
+                                    </h1>
+                                    <h3>{y2title2}</h3>
+                                    <Intro>
+                                        {y2intro2a}
+                                    </Intro>
+                                </Year2P1Title>
+                            </div>
+                        </Year2P1>
 
-                <Year2P2Title>
-                    <h3>{y2intro2b}</h3>
-                </Year2P2Title>
+                        <Year2P2Title>
+                            <h3>{y2intro2b}</h3>
+                        </Year2P2Title>
 
-                <Year2P2>
-                    <Loadimg>
-                        <p>{y2title3}</p>
-                        <img src={G1} width="60%" alt="Local System" />
-                    </Loadimg>
-                    <Software>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <SoftTh>{y2front}</SoftTh>
-                                    <SoftTh>{y2back}</SoftTh>
-                                    <SoftTh>{y2db}</SoftTh>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <img src={I7} width="175px" alt="Frontend" />
-                                        <img src={I1} width="100px" alt="Frontend" />
-                                    </td>
-                                    <td>
-                                        <img src={I4} width="120px" alt="Backend" />
-                                        <img src={I5} width="120px" style={{ padding: '20px 0' }} alt="Backend" />
-                                        <img src={I8} width="120px" alt="Backend" />
-                                    </td>
-                                    <td>
-                                        <img src={I3} width="110px" alt="Database" />
-                                        <img src={I2} width="110px" alt="Database" />
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </Software>
-                </Year2P2>
-            </Opus>
+                        <Year2P2>
+                            <Loadimg>
+                                <p>{y2title3}</p>
+                                <img src={G1} width="60%" alt="Local System" />
+                            </Loadimg>
+                            <Software>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <SoftTh>{y2front}</SoftTh>
+                                            <SoftTh>{y2back}</SoftTh>
+                                            <SoftTh>{y2db}</SoftTh>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src={I7} width="175px" alt="Frontend" />
+                                                <img src={I1} width="100px" alt="Frontend" />
+                                            </td>
+                                            <td>
+                                                <img src={I4} width="120px" alt="Backend" />
+                                                <img src={I5} width="120px" style={{ padding: '20px 0' }} alt="Backend" />
+                                                <img src={I8} width="120px" alt="Backend" />
+                                            </td>
+                                            <td>
+                                                <img src={I3} width="110px" alt="Database" />
+                                                <img src={I2} width="110px" alt="Database" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </Software>
+                        </Year2P2>
+                    </>
+                ) : (
+                    <ClickMsg>Click Me</ClickMsg>
+                )}
+            </ItemArea>
 
             {/* Year 3 */}
-            <Opus className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""}>
+            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3} style={{ height: `${year3H}px` }}>
                 <TitleH2>{y3title}</TitleH2>
-                <Year3Msg>
-                    {y3msg}
-                </Year3Msg>
-            </Opus>
+                {year3Data ? (
+                    <Year3Msg>
+                        {y3msg}
+                    </Year3Msg>
+                ) : (
+                    <ClickMsg>Click Me</ClickMsg>
+                )}
+            </ItemArea>
+
+            {/* Test */}
         </>
     );
 }
 
 export default WIt;
 
-
-const Opus = styled.div`
+const ItemArea = styled.div`
     text-align: center;
     background-color: #fff;
     padding: 20px;
     width: 75%;
     margin: 3% auto;
     border-radius: 10px;
+    animation: all 0.5s ease-in-out forwards;
+`
+const ClickMsg = styled.p`
+    margin: 0;
 `
 //  Year 1
 const Year1Img = styled.img`
@@ -127,8 +184,8 @@ const Year1Img = styled.img`
     border: 2px solid #000;
     border-radius: 10px;
 `
-const TitleH2 = styled.h2`
-    margin: 2.5% 0 3.5% 0;
+const TitleH2 = styled.h1`
+    margin: 2.5% 0 2.5% 0;
 `
 const Year1Msg = styled.p`
       text-align: left;

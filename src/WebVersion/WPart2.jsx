@@ -3,12 +3,11 @@ import { MdEmail, MdLocationPin } from "react-icons/md";
 import { TbWorld } from "react-icons/tb";
 import { FaBirthdayCake } from "react-icons/fa";
 import { IoHeart } from "react-icons/io5";
-// import { createRoot } from 'react-dom/client';
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from "react";
 import PortfoiloImg from '../assets/Portfoilo.jpeg'
-import ItBG from '../assets/3FE099FF-4660-4E8C-9E3B-B779A50EAC65_1_105_c.jpeg';
-import Tc from './Wtimeline'
+import ItBG from '../assets/ItBg.jpeg';
+import Tc from './WTimeline'
 import It from "./WIt"
 import styled from "@emotion/styled";
 
@@ -16,33 +15,32 @@ function WPart2() {
     const { t, i18n } = useTranslation();
     const [c2switch, setC2Switch] = useState(false)
     const [checkC3, setCheckC3] = useState(false)
-    const BPxSize = {
+
+    const S1PxSize = {
         "en": { 1350: '1200px', 850: '1250px', other: '1350px' },
         "zh": { 1350: '1100px', 850: '1100px', other: '1200px' },
         "ja": { 1350: '2050px', 850: '2150px', other: '2300px' }
     }
-    const APxSize = {
-        "en": { 1350: '2600px', 850: '2450px', other: '2350px' },
-        "zh": { 1350: '2550px', 850: '2350px', other: '2350px' },
-        "ja": { 1350: '2600px', 850: '2450px', other: '2400px' }
-    }
+
     // JS c2
     let previousMousePosition = null;
+
     const C2HandleOnMouseEnter = (event) => {
         const pc2Element = document.getElementById("pc2");
-        const rect = pc2Element.getBoundingClientRect();
-        const { top, left, bottom, right } = rect;
+        const { top, left, bottom, right } = pc2Element.getBoundingClientRect();
         const isOutside =
             previousMousePosition === null ||
             (previousMousePosition.x < left ||
                 previousMousePosition.x > right ||
                 previousMousePosition.y < top ||
                 previousMousePosition.y > bottom);
+
         if (isOutside) {
-            HandelPxSize(pc2Element, i18n.language, BPxSize)
+            HandelPxSize(pc2Element, i18n.language, S1PxSize)
         }
         previousMousePosition = { x: event.clientX, y: event.clientY };
         setC2Switch(true);
+
         const pc3Element = document.getElementById("pc3");
         pc3Element.addEventListener("mouseenter", C3HandleOnMouseEnter)
         pc3Element.addEventListener("mouseleave", C3HandleOnMouseLeave)
@@ -50,26 +48,32 @@ function WPart2() {
 
     // JS c3
     const C3HandleOnMouseEnter = () => {
+        const pc2Element = document.getElementById('pc2');
         const pc3Element = document.getElementById('pc3');
         const pc3ImgElement = document.getElementById('pc3-img');
         pc3Element.style.gridColumn = '1 / span 6';
-        HandelPxSize(pc3Element, i18n.language, APxSize)
+
+        pc2Element.style.height = '600px';
+        pc3Element.style.height = '100%';
+
         pc3ImgElement.style.width = '100%';
         pc3ImgElement.style.height = '200px';
         document.getElementById('it-btn').style.margin = '0 0 3% 0';
-        const pc2Element = document.getElementById("pc2");
-        if (pc2Element.style.height > '1000px') {
-            setCheckC3(true)
-        }
+        setCheckC3(true)
+        setC2Switch(false)
     }
 
     const C3HandleOnMouseLeave = () => {
+        const pc2Element = document.getElementById('pc2');
+        HandelPxSize(pc2Element, i18n.language, S1PxSize)
+
         const pc3Element = document.getElementById('pc3');
         const pc3ImgElement = document.getElementById('pc3-img');
-        HandelPxSize(pc3Element, i18n.language, BPxSize)
+        HandelPxSize(pc3Element, i18n.language, S1PxSize)
         pc3Element.style.gridColumn = '5 / span 2';
         pc3ImgElement.style.width = '300px';
         pc3ImgElement.style.height = '100%';
+        setC2Switch(true)
         setCheckC3(false)
     }
 
@@ -85,14 +89,25 @@ function WPart2() {
         }
     }
 
+    const CalculateAge = () => {
+        const today = new Date();
+        const birth = new Date('1994-12-07');
+        let age = today.getFullYear() - birth.getFullYear();
+        const monthDiff = today.getMonth() - birth.getMonth();
+        const dayDiff = today.getDate() - birth.getDate();
+        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+            age--;
+        }
+        return age;
+    }
+
     //----------------------------------------------------------------
     useEffect(() => {
         const handleLanguageChange = (lng) => {
-            setC2Switch(false);
             const pc2Element = document.getElementById("pc2");
             const pc3Element = document.getElementById("pc3");
-            HandelPxSize(pc2Element, lng, BPxSize)
-            HandelPxSize(pc3Element, lng, BPxSize)
+            HandelPxSize(pc2Element, lng, S1PxSize)
+            HandelPxSize(pc3Element, lng, S1PxSize)
         };
         i18n.on('languageChanged', handleLanguageChange);
         return () => {
@@ -112,7 +127,7 @@ function WPart2() {
                         {/* Birthday */}
                         <DataItem>
                             <ItemLogo><FaBirthdayCake /></ItemLogo>
-                            <ItemH4a>1994-12-07  (30)</ItemH4a>
+                            <ItemH4a>1994-12-07  ({CalculateAge()})</ItemH4a>
                         </DataItem>
                         {/* Country */}
                         <DataItem>
@@ -161,7 +176,6 @@ function WPart2() {
                         <p>IT</p>
                     </ItBtn>
                 </ImgBtn>
-                {/* <div id="pc3-part2"></div> */}
                 {checkC3 ?
                     (
                         <div id="pc3-part2"><It /></div>
