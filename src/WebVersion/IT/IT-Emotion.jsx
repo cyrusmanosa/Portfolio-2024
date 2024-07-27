@@ -1,14 +1,17 @@
 import styled from '@emotion/styled';
 
 export const ItemArea = styled.div`
+    position: relative;
+    overflow: hidden;
     text-align: center;
-    background-color: #fff;
     padding: 20px;
     width: 75%;
     margin: 3% auto;
     border-radius: 10px;
     transition: all 0.5s ease;
+
 `
+
 export const TitleH2 = styled.h1`
     margin: 2.5% 0 2.5% 0;
 `
@@ -65,3 +68,18 @@ export const Software = styled.div`
         padding: 2px 5px;
     }
 `
+
+export const ContentArea = styled.div`
+    position: relative;
+    z-index: 2;
+`;
+
+export const BackgroundBlur = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all 1s ease;
+`;

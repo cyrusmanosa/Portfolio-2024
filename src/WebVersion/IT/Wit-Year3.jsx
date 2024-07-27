@@ -13,9 +13,12 @@ import L2 from '../../assets/Project/CareConnect/Level2.png';
 import Web from '../../assets/Project/CareConnect/Web.png';
 import CCLogo from '../../assets/Project/CareConnect/logo.png';
 
+import Portfoilo2024_Cap from '../../assets/Portfoilo2024_Cap.png'
+
 import {
     ItemArea, TitleH2, ItemForShowArea, ClickMsg,
-    SystemImg, SystemComposition, Software
+    SystemImg, SystemComposition, Software,
+    ContentArea, BackgroundBlur
 } from './IT-Emotion'
 
 function ITYear3() {
@@ -24,17 +27,37 @@ function ITYear3() {
     const { y3p_title, y3p_intro } = t("portfolio.year3.portfolio2024");
     const { y3c_title, y3c_intro1, y3c_intro2, y3c_intro3, y3c_title3, y3c_workloadTitle, y3c_workload } = t("portfolio.year3.careconnect");
     // 1
-    const [year3_P_H, setYear3_P_H] = useState(100)
     const [year3_P_Data, setyear3_P_Data] = useState(false)
+    const [year3_P_Bg, setYear3_P_Bg] = useState({
+        height: '140px',
+        backgroundImage: `url(${Portfoilo2024_Cap})`,
+        backgroundRepeat: 'repeat',
+        backgroundPositionX: 'center',
+        backgroundPositionY: '10%',
+        backgroundSize: 'cover',
+        filter: 'blur(7px)',
+        transition: 'all 1s ease',
+    });
+
+
     // 2
     const [year3_C_H, setYear3_C_H] = useState(100)
     const [year3_C_Data, setyear3_C_Data] = useState(false)
     const HandleYear3P = () => {
-        if (year3_P_H == 100) {
-            setYear3_P_H(year3_P_H + 100)
+        if (!year3_P_Data) {
+            setYear3_P_Bg({ height: '300px', background: '#fff', transition: 'all 1s ease' })
             setyear3_P_Data(true);
         } else {
-            setYear3_P_H(100)
+            setYear3_P_Bg({
+                height: '140px',
+                backgroundImage: `url(${Portfoilo2024_Cap})`,
+                backgroundRepeat: 'repeat',
+                backgroundPositionX: 'center',
+                backgroundPositionY: '10%',
+                backgroundSize: 'cover',
+                filter: 'blur(7px)',
+                transition: 'all 1s ease'
+            });
             setyear3_P_Data(false);
         }
     }
@@ -54,17 +77,20 @@ function ITYear3() {
     return (
         <>
             {/* Portfoilo */}
-            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3P} style={{ height: `${year3_P_H}px` }}>
-                <TitleH2>{y3p_title}</TitleH2>
-                {year3_P_Data ? (
-                    <ItemForShowArea>
-                        <Year3_P_Msg>
-                            {y3p_intro}
-                        </Year3_P_Msg>
-                    </ItemForShowArea>
-                ) : (
-                    <ClickMsg>Click Me</ClickMsg>
-                )}
+            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3P}>
+                <BackgroundBlur style={year3_P_Bg} />
+                <ContentArea>
+                    <TitleH2 style={{ zIndex: 999 }}>{y3p_title}</TitleH2>
+                    {year3_P_Data ? (
+                        <ItemForShowArea>
+                            <Year3_P_Msg>
+                                {y3p_intro}
+                            </Year3_P_Msg>
+                        </ItemForShowArea>
+                    ) : (
+                        <ClickMsg>Click Me</ClickMsg>
+                    )}
+                </ContentArea>
             </ItemArea>
 
             {/* Care Connect */}
@@ -205,5 +231,3 @@ const Year3SoftwareName = styled.th`
     font-size: 25px;
     width: 200px;
 `
-
-
