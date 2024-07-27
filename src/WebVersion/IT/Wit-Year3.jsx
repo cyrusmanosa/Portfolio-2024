@@ -13,7 +13,8 @@ import L2 from '../../assets/Project/CareConnect/Level2.png';
 import Web from '../../assets/Project/CareConnect/Web.png';
 import CCLogo from '../../assets/Project/CareConnect/logo.png';
 
-import Portfoilo2024_Cap from '../../assets/Portfoilo2024_Cap.png'
+import Portfoilo2024_Cap from '../../assets/WebVersion1.png'
+import CareConnect_Cap from '../../assets/CareConnect_Cap.png';
 
 import {
     ItemArea, TitleH2, ItemForShowArea, ClickMsg,
@@ -36,16 +37,11 @@ function ITYear3() {
         backgroundPositionY: '10%',
         backgroundSize: 'cover',
         filter: 'blur(7px)',
-        transition: 'all 1s ease',
+        transition: 'all 2s ease',
     });
-
-
-    // 2
-    const [year3_C_H, setYear3_C_H] = useState(100)
-    const [year3_C_Data, setyear3_C_Data] = useState(false)
     const HandleYear3P = () => {
         if (!year3_P_Data) {
-            setYear3_P_Bg({ height: '300px', background: '#fff', transition: 'all 1s ease' })
+            setYear3_P_Bg({ height: '300px', background: '#fff', transition: 'all 2s ease' })
             setyear3_P_Data(true);
         } else {
             setYear3_P_Bg({
@@ -56,17 +52,40 @@ function ITYear3() {
                 backgroundPositionY: '10%',
                 backgroundSize: 'cover',
                 filter: 'blur(7px)',
-                transition: 'all 1s ease'
+                transition: 'all 2s ease'
             });
             setyear3_P_Data(false);
         }
     }
+
+    // 2
+    const [year3_C_Data, setyear3_C_Data] = useState(false)
+    const [year3_C_Bg, setYear3_C_Bg] = useState({
+        height: '140px',
+        backgroundImage: `url(${CareConnect_Cap})`,
+        backgroundRepeat: 'repeat',
+        backgroundPositionX: 'center',
+        backgroundPositionY: '40%',
+        backgroundSize: 'cover',
+        filter: 'blur(7px)',
+        transition: 'all 2s ease',
+    });
+
     const HandleYear3C = () => {
-        if (year3_C_H == 100) {
-            setYear3_C_H(year3_C_H + 1200)
+        if (!year3_C_Data) {
+            setYear3_C_Bg({ height: '1300px', background: '#fff', transition: 'all 2s ease' })
             setyear3_C_Data(true);
         } else {
-            setYear3_C_H(100)
+            setYear3_C_Bg({
+                height: '140px',
+                backgroundImage: `url(${CareConnect_Cap})`,
+                backgroundRepeat: 'repeat',
+                backgroundPositionX: 'center',
+                backgroundPositionY: '40%',
+                backgroundSize: 'cover',
+                filter: 'blur(7px)',
+                transition: 'all 2s ease',
+            })
             setyear3_C_Data(false);
         }
     }
@@ -94,74 +113,77 @@ function ITYear3() {
             </ItemArea>
 
             {/* Care Connect */}
-            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3C} style={{ height: `${year3_C_H}px` }}>
-                <TitleH2>{y3c_title}</TitleH2>
-                {year3_C_Data ? (
-                    <ItemForShowArea>
-                        <Year3P1>
-                            <Year3P1Title>
-                                <img src={CCLogo} alt="Logo" width="250px" />
-                                <h1>{y3c_intro1}</h1>
-                            </Year3P1Title>
+            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3C}>
+                <BackgroundBlur style={year3_C_Bg} />
+                <ContentArea>
+                    <TitleH2>{y3c_title}</TitleH2>
+                    {year3_C_Data ? (
+                        <ItemForShowArea>
+                            <Year3P1>
+                                <Year3P1Title>
+                                    <img src={CCLogo} alt="Logo" width="250px" />
+                                    <h1>{y3c_intro1}</h1>
+                                </Year3P1Title>
 
-                            <Year3ImgArea>
-                                <img src={L1} alt="Level1" />
-                                <img src={L2} alt="Level2" />
-                                <img src={Web} alt="Level2" />
-                            </Year3ImgArea>
-                        </Year3P1>
+                                <Year3ImgArea>
+                                    <img src={L1} alt="Level1" />
+                                    <img src={L2} alt="Level2" />
+                                    <img src={Web} alt="Level2" />
+                                </Year3ImgArea>
+                            </Year3P1>
 
-                        <Year3P2Title>{y3c_intro2}</Year3P2Title>
+                            <Year3P2Title>{y3c_intro2}</Year3P2Title>
 
-                        <Year3P2>
-                            <h3>{y3c_intro3}</h3>
-                        </Year3P2>
+                            <Year3P2>
+                                <h3>{y3c_intro3}</h3>
+                            </Year3P2>
 
-                        <h3 style={{ margin: 0 }}>{y3c_workloadTitle} : </h3>
-                        <h2 style={{ margin: 0 }}>{y3c_workload}</h2>
+                            <h3 style={{ margin: 0 }}>{y3c_workloadTitle} : </h3>
+                            <h2 style={{ margin: 0 }}>{y3c_workload}</h2>
 
-                        {/* System */}
-                        <SystemImg>
-                            <SystemComposition>
-                                <p>{y3c_title3}</p>
-                                <img src={G2} width="65%" alt="online System" />
-                            </SystemComposition>
+                            {/* System */}
+                            <SystemImg>
+                                <SystemComposition>
+                                    <p>{y3c_title3}</p>
+                                    <img src={G2} width="65%" alt="online System" />
+                                </SystemComposition>
 
-                            <Software>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <Year3SoftwareName>{front}</Year3SoftwareName>
-                                            <Year3SoftwareName>{back}</Year3SoftwareName>
-                                            <Year3SoftwareName>{db}</Year3SoftwareName>
-                                            <Year3SoftwareName>{other}</Year3SoftwareName>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <img src={I9} width="120px" alt="React" />
-                                            </td>
-                                            <td>
-                                                <img src={I4} width="120px" alt="Golang" />
-                                            </td>
-                                            <td>
-                                                <img src={I10} width="110px" alt="Firebase" />
-                                            </td>
-                                            <td>
-                                                <img src={I8} width="80px" alt="Figma" />
-                                                <img src={I6} width="150px" alt="Github" style={{ padding: '10px 0' }} />
-                                                <img src={I11} width="120px" alt="AWS" />
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </Software>
-                        </SystemImg>
-                    </ItemForShowArea>
-                ) : (
-                    <ClickMsg>Click Me</ClickMsg>
-                )}
+                                <Software>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <Year3SoftwareName>{front}</Year3SoftwareName>
+                                                <Year3SoftwareName>{back}</Year3SoftwareName>
+                                                <Year3SoftwareName>{db}</Year3SoftwareName>
+                                                <Year3SoftwareName>{other}</Year3SoftwareName>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src={I9} width="120px" alt="React" />
+                                                </td>
+                                                <td>
+                                                    <img src={I4} width="120px" alt="Golang" />
+                                                </td>
+                                                <td>
+                                                    <img src={I10} width="110px" alt="Firebase" />
+                                                </td>
+                                                <td>
+                                                    <img src={I8} width="80px" alt="Figma" />
+                                                    <img src={I6} width="150px" alt="Github" style={{ padding: '10px 0' }} />
+                                                    <img src={I11} width="120px" alt="AWS" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </Software>
+                            </SystemImg>
+                        </ItemForShowArea>
+                    ) : (
+                        <ClickMsg>Click Me</ClickMsg>
+                    )}
+                </ContentArea>
             </ItemArea>
         </>
     );

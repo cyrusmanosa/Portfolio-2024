@@ -8,8 +8,6 @@ export const ItemArea = styled.div`
     width: 75%;
     margin: 3% auto;
     border-radius: 10px;
-    transition: all 0.5s ease;
-
 `
 
 export const TitleH2 = styled.h1`
@@ -18,7 +16,7 @@ export const TitleH2 = styled.h1`
 
 export const ItemForShowArea = styled.div`
     opacity: 0;
-    animation: fadeIn 0.5s forwards 0.5s;
+    animation: fadeIn 1s forwards 1s;
     @keyframes fadeIn {
         to {
             opacity: 1; 
@@ -81,5 +79,4 @@ export const BackgroundBlur = styled.div`
     right: 0;
     bottom: 0;
     z-index: 1;
-    transition: all 1s ease;
 `;

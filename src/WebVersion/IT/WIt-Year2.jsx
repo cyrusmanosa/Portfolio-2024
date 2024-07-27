@@ -12,9 +12,12 @@ import I6 from '../../assets/Project/Logo/Github_Logo.png';
 import I7 from '../../assets/Project/Logo/Flutter_Logo.png';
 import I8 from '../../assets/Project/Logo/Figma_Logo.png';
 
+import DatingDate_Cap from '../../assets/DatingDate_Cap.png'
+
 import {
     ItemArea, TitleH2, ItemForShowArea, ClickMsg, Intro,
-    SystemImg, SystemComposition, Software
+    SystemImg, SystemComposition, Software,
+    ContentArea, BackgroundBlur
 } from './IT-Emotion'
 
 function ITYear2() {
@@ -30,87 +33,108 @@ function ITYear2() {
     const back = t("backTitle");
     const db = t("dbTitle");
     const other = t("otherTitle");
-    const [year2H, setYear2H] = useState(100)
     const [year2Data, setYear2Data] = useState(false)
+    const [year2Bg, setYear2Bg] = useState({
+        height: '140px',
+        backgroundImage: `url(${DatingDate_Cap})`,
+        backgroundRepeat: 'repeat',
+        backgroundPositionX: 'center',
+        backgroundSize: 'cover',
+        filter: 'blur(7px)',
+        transition: 'all 2s ease',
+    });
+
+
     const HandleYear2 = () => {
-        if (year2H == 100) {
-            setYear2H(year2H + 1250)
+        if (!year2Data) {
+            setYear2Bg({ height: '1450px', background: '#fff', transition: 'all 2s ease' })
             setYear2Data(true);
         } else {
-            setYear2H(100)
+            setYear2Bg({
+                height: '140px',
+                backgroundImage: `url(${DatingDate_Cap})`,
+                backgroundRepeat: 'repeat',
+                backgroundPositionX: 'center',
+                backgroundSize: 'cover',
+                filter: 'blur(7px)',
+                transition: 'all 2s ease',
+            })
             setYear2Data(false);
         }
     }
     return (
-        <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear2} style={{ height: `${year2H}px` }}>
-            <TitleH2>{y2title}</TitleH2>
-            {year2Data ? (
-                <ItemForShowArea>
-                    <Year2P1>
-                        <div className="item">
-                            <img src={DD1} alt="Dating Date Project" />
-                        </div>
-                        <div className="item">
-                            <Year2P1Title>
-                                <h1>
-                                    {y2intro1a}<br /><span>{y2intro1b}</span>{y2intro1c}
-                                </h1>
-                                <h3>{y2title2}</h3>
-                                <Intro>
-                                    {y2intro2a}
-                                </Intro>
-                            </Year2P1Title>
-                        </div>
-                    </Year2P1>
+        <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear2}>
+            <BackgroundBlur style={year2Bg} />
+            <ContentArea>
+                <TitleH2>{y2title}</TitleH2>
+                {year2Data ? (
+                    <ItemForShowArea>
+                        <Year2P1>
+                            <div className="item">
+                                <img src={DD1} alt="Dating Date Project" />
+                            </div>
+                            <div className="item">
+                                <Year2P1Title>
+                                    <h1>
+                                        {y2intro1a}<br /><span>{y2intro1b}</span>{y2intro1c}
+                                    </h1>
+                                    <h3>{y2title2}</h3>
+                                    <Intro>
+                                        {y2intro2a}
+                                    </Intro>
+                                </Year2P1Title>
+                            </div>
+                        </Year2P1>
 
-                    <Year2P2Title>
-                        <h3>{y2intro2b}</h3>
-                    </Year2P2Title>
+                        <Year2P2Title>
+                            <h3>{y2intro2b}</h3>
+                        </Year2P2Title>
 
-                    <SystemImg>
-                        <SystemComposition>
-                            <p>{y2title3}</p>
-                            <img src={G1} width="60%" alt="Local System" />
-                        </SystemComposition>
+                        <SystemImg>
+                            <SystemComposition>
+                                <p>{y2title3}</p>
+                                <img src={G1} width="60%" alt="Local System" />
+                            </SystemComposition>
 
-                        <Software>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <Year2SoftwareName>{front}</Year2SoftwareName>
-                                        <Year2SoftwareName>{back}</Year2SoftwareName>
-                                        <Year2SoftwareName>{db}</Year2SoftwareName>
-                                        <Year2SoftwareName>{other}</Year2SoftwareName>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <img src={I1} width="100px" alt="Xcode" />
-                                            <img src={I7} width="175px" alt="Flutter" />
-                                        </td>
-                                        <td>
-                                            <img src={I4} width="120px" alt="Golang" />
-                                            <img src={I5} width="120px" style={{ padding: '20px 0' }} alt="Grpc" />
-                                        </td>
-                                        <td>
-                                            <img src={I2} width="110px" alt="PostgresSql" />
-                                            <img src={I3} width="110px" alt="Docker" />
-                                        </td>
-                                        <td>
-                                            <img src={I6} width="130px" alt="Github" style={{ padding: '20px 0' }} />
-                                            <img src={I8} width="120px" alt="Figma" />
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </Software>
-                    </SystemImg>
+                            <Software>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <Year2SoftwareName>{front}</Year2SoftwareName>
+                                            <Year2SoftwareName>{back}</Year2SoftwareName>
+                                            <Year2SoftwareName>{db}</Year2SoftwareName>
+                                            <Year2SoftwareName>{other}</Year2SoftwareName>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src={I1} width="100px" alt="Xcode" />
+                                                <img src={I7} width="175px" alt="Flutter" />
+                                            </td>
+                                            <td>
+                                                <img src={I4} width="120px" alt="Golang" />
+                                                <img src={I5} width="120px" style={{ padding: '20px 0' }} alt="Grpc" />
+                                            </td>
+                                            <td>
+                                                <img src={I2} width="110px" alt="PostgresSql" />
+                                                <img src={I3} width="110px" alt="Docker" />
+                                            </td>
+                                            <td>
+                                                <img src={I6} width="130px" alt="Github" style={{ padding: '20px 0' }} />
+                                                <img src={I8} width="120px" alt="Figma" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </Software>
+                        </SystemImg>
 
-                </ItemForShowArea>
-            ) : (
-                <ClickMsg>Click Me</ClickMsg>
-            )}
+                    </ItemForShowArea>
+                ) : (
+                    <ClickMsg>Click Me</ClickMsg>
+                )}
+            </ContentArea>
         </ItemArea>
     );
 }
