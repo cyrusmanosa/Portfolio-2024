@@ -36,6 +36,21 @@ function MyDialog() {
         setOpen(false);
     };
 
+    const GitBtn = styled(Button)`
+    display: flex;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 1%;
+    font-size: 130%;
+    border-radius: 0;
+    text-transform: capitalize;
+    border-top: 2.5px solid #000;
+    border-bottom: 2.5px solid #000;
+    color:#000;
+    font-family: "Paytone One", sans-serif;
+    font-style: normal;
+    `;
 
     return (
         <>
@@ -60,24 +75,3 @@ function MyDialog() {
 }
 
 export default MyDialog;
-
-
-
-const GitBtn = styled(Button)`
-display: flex;
-text-align: center;
-width: 100%;
-background-color: #fff;
-padding: 1%;
-font-size: 130%;
-border-radius: 0;
-text-transform: capitalize;
-border-top: 2.5px solid #000;
-border-bottom: 2.5px solid #000;
-color:#000;
-font-family: "Paytone One", sans-serif;
-font-style: normal;
-`;
-
-
-///
