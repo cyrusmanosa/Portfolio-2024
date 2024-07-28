@@ -40,7 +40,7 @@ function ITYear3() {
     }
     const HandleYear3C = () => {
         if (year3_C_H == 100) {
-            setYear3_C_H(year3_C_H + 1200)
+            setYear3_C_H(year3_C_H + 1350)
             setyear3_C_Data(true);
         } else {
             setYear3_C_H(100)
@@ -72,18 +72,16 @@ function ITYear3() {
                 <TitleH2>{y3c_title}</TitleH2>
                 {year3_C_Data ? (
                     <ItemForShowArea>
-                        <Year3P1>
-                            <Year3P1Title>
-                                <img src={CCLogo} alt="Logo" width="250px" />
-                                <h1>{y3c_intro1}</h1>
-                            </Year3P1Title>
+                        <Year3P1Title>
+                            <img src={CCLogo} alt="Logo" width="250px" />
+                            <h1>{y3c_intro1}</h1>
+                        </Year3P1Title>
 
-                            <Year3ImgArea>
-                                <img src={L1} alt="Level1" />
-                                <img src={L2} alt="Level2" />
-                                <img src={Web} alt="Level2" />
-                            </Year3ImgArea>
-                        </Year3P1>
+                        <Year3ImgArea>
+                            <img src={L1} alt="Level1" />
+                            <img src={L2} alt="Level2" />
+                            <img src={Web} alt="Level2" />
+                        </Year3ImgArea>
 
                         <Year3P2Title>{y3c_intro2}</Year3P2Title>
 
@@ -149,16 +147,9 @@ const Year3_P_Msg = styled.p`
       margin: 0 auto 15px auto;
       font-size: 16px;
 `
-const Year3P1 = styled.div`
-    display: grid;
-    justify-content: center;
-    grid: auto / auto auto;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom:2.5%;
-`
+
 const Year3P1Title = styled.div`
-    margin-button:2.5%; 
+    margin:2.5% 0; 
     letterSpacing: 3;
     h1{
         margin:0;
