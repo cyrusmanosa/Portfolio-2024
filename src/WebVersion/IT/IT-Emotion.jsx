@@ -8,6 +8,7 @@ export const ItemArea = styled.div`
     width: 75%;
     margin: 3% auto;
     border-radius: 10px;
+    border: 3px solid #000;
 `
 
 export const TitleH2 = styled.h1`

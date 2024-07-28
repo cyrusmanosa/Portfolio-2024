@@ -35,29 +35,27 @@ function ITYear2() {
     const other = t("otherTitle");
     const [year2Data, setYear2Data] = useState(false)
     const [year2Bg, setYear2Bg] = useState({
-        height: '140px',
         backgroundImage: `url(${DatingDate_Cap})`,
         backgroundRepeat: 'repeat',
         backgroundPositionX: 'center',
         backgroundSize: 'cover',
-        filter: 'blur(7px)',
-        transition: 'all 2s ease',
+        filter: 'blur(5px)',
+        transition: 'all 1s ease',
     });
 
 
     const HandleYear2 = () => {
         if (!year2Data) {
-            setYear2Bg({ height: '1450px', background: '#fff', transition: 'all 2s ease' })
+            setYear2Bg({ height: '1450px', background: '#fff' })
             setYear2Data(true);
         } else {
             setYear2Bg({
-                height: '140px',
                 backgroundImage: `url(${DatingDate_Cap})`,
                 backgroundRepeat: 'repeat',
                 backgroundPositionX: 'center',
                 backgroundSize: 'cover',
-                filter: 'blur(7px)',
-                transition: 'all 2s ease',
+                filter: 'blur(5px)',
+                transition: 'all 1s ease',
             })
             setYear2Data(false);
         }

@@ -38,7 +38,7 @@
     "portfolio":{
         "year1":{
             "y1title": "一年級 - 作品集網站2022",
-            "y1msg": "這個作品集網站是大阪Ecc電腦學校就讀時，一年級所學習的HTML、CSS和JavaScript，並使用Firebase Hosting進行管理。"
+            "y1msg": "這個作品集網站是大阪Ecc電腦學校就讀時，一年級所學習的HTML、CSS和JS及使用Firebase Hosting進行管理。"
         },
         "year2":{
             "y2title": "二年級 - 個人製作作品",

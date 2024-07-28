@@ -30,29 +30,27 @@ function ITYear3() {
     // 1
     const [year3_P_Data, setyear3_P_Data] = useState(false)
     const [year3_P_Bg, setYear3_P_Bg] = useState({
-        height: '140px',
         backgroundImage: `url(${Portfoilo2024_Cap})`,
         backgroundRepeat: 'repeat',
         backgroundPositionX: 'center',
         backgroundPositionY: '10%',
         backgroundSize: 'cover',
-        filter: 'blur(7px)',
-        transition: 'all 2s ease',
+        filter: 'blur(3px)',
+        transition: 'all 1s ease',
     });
     const HandleYear3P = () => {
         if (!year3_P_Data) {
-            setYear3_P_Bg({ height: '300px', background: '#fff', transition: 'all 2s ease' })
+            setYear3_P_Bg({ height: '300px', background: '#fff' })
             setyear3_P_Data(true);
         } else {
             setYear3_P_Bg({
-                height: '140px',
                 backgroundImage: `url(${Portfoilo2024_Cap})`,
                 backgroundRepeat: 'repeat',
                 backgroundPositionX: 'center',
                 backgroundPositionY: '10%',
                 backgroundSize: 'cover',
-                filter: 'blur(7px)',
-                transition: 'all 2s ease'
+                filter: 'blur(3px)',
+                transition: 'all 1s ease'
             });
             setyear3_P_Data(false);
         }
@@ -61,30 +59,28 @@ function ITYear3() {
     // 2
     const [year3_C_Data, setyear3_C_Data] = useState(false)
     const [year3_C_Bg, setYear3_C_Bg] = useState({
-        height: '140px',
         backgroundImage: `url(${CareConnect_Cap})`,
         backgroundRepeat: 'repeat',
         backgroundPositionX: 'center',
-        backgroundPositionY: '40%',
+        backgroundPositionY: '50%',
         backgroundSize: 'cover',
-        filter: 'blur(7px)',
-        transition: 'all 2s ease',
+        filter: 'blur(3px)',
+        transition: 'all 1s ease',
     });
 
     const HandleYear3C = () => {
         if (!year3_C_Data) {
-            setYear3_C_Bg({ height: '1300px', background: '#fff', transition: 'all 2s ease' })
+            setYear3_C_Bg({ height: '1600px', background: '#fff' })
             setyear3_C_Data(true);
         } else {
             setYear3_C_Bg({
-                height: '140px',
                 backgroundImage: `url(${CareConnect_Cap})`,
                 backgroundRepeat: 'repeat',
                 backgroundPositionX: 'center',
-                backgroundPositionY: '40%',
+                backgroundPositionY: '50%',
                 backgroundSize: 'cover',
-                filter: 'blur(7px)',
-                transition: 'all 2s ease',
+                filter: 'blur(3px)',
+                transition: 'all 1s ease',
             })
             setyear3_C_Data(false);
         }
@@ -171,7 +167,7 @@ function ITYear3() {
                                                 </td>
                                                 <td>
                                                     <img src={I8} width="80px" alt="Figma" />
-                                                    <img src={I6} width="150px" alt="Github" style={{ padding: '10px 0' }} />
+                                                    <img src={I6} width="200px" alt="Github" style={{ padding: '10px 0' }} />
                                                     <img src={I11} width="120px" alt="AWS" />
                                                 </td>
                                             </tr>
@@ -200,10 +196,9 @@ const Year3_P_Msg = styled.p`
 const Year3P1 = styled.div`
     display: grid;
     justify-content: center;
-    grid: auto / auto auto;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom:2.5%;
+    margin:0 auto 2.5% auto;
 `
 const Year3P1Title = styled.div`
     margin-button:2.5%; 
@@ -223,7 +218,7 @@ const Year3ImgArea = styled.div`
     @media (min-width: 1350px) {
         padding: 0 20px;
         img {
-            height: 150px;
+            height: 200px;
             object-fit: cover;
         }
     }
