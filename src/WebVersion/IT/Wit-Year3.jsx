@@ -7,6 +7,9 @@ import I8 from '../../assets/Project/Logo/Figma_Logo.png';
 import I9 from '../../assets/Project/Logo/React_Logo.png';
 import I10 from '../../assets/Project/Logo/Firebase_Logo.png';
 import I11 from '../../assets/Project/Logo/AWS_Logo.png';
+import I12 from '../../assets/Project/Logo/NFC_Logo.png';
+
+
 import G2 from '../../assets/Project/CareConnect/Group5.png';
 import L1 from '../../assets/Project/CareConnect/Level1.png';
 import L2 from '../../assets/Project/CareConnect/Level2.png';
@@ -116,6 +119,7 @@ function ITYear3() {
                                             </td>
                                             <td>
                                                 <img src={I4} width="120px" alt="Golang" />
+                                                <img src={I11} width="120px" alt="AWS" style={{ padding: '10px 0' }} />
                                             </td>
                                             <td>
                                                 <img src={I10} width="110px" alt="Firebase" />
@@ -123,7 +127,7 @@ function ITYear3() {
                                             <td>
                                                 <img src={I8} width="80px" alt="Figma" />
                                                 <img src={I6} width="150px" alt="Github" style={{ padding: '10px 0' }} />
-                                                <img src={I11} width="120px" alt="AWS" />
+                                                <img src={I12} width="60px" alt="NFC" />
                                             </td>
                                         </tr>
                                     </tbody>

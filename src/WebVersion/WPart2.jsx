@@ -187,7 +187,7 @@ function WPart2() {
                 </ImgBtn>
                 {checkC3 ?
                     (
-                        <div id="pc3-part2"><It /></div>
+                        <div id="pc3-part2" ><It /></div>
                     ) : (
                         <div id="pc3-part2"></div>
                     )
