@@ -81,7 +81,7 @@ function ITYear3() {
                         <Year3ImgArea>
                             <img src={L1} alt="Level1" />
                             <img src={L2} alt="Level2" />
-                            <img src={Web} alt="Level2" />
+                            <img src={Web} alt="Web" />
                         </Year3ImgArea>
 
                         <Year3P2Title>{y3c_intro2}</Year3P2Title>
@@ -160,6 +160,7 @@ const Year3P1Title = styled.div`
 `
 const Year3ImgArea = styled.div`
     padding: 0 10px;
+    margin-bottom:2.5%;
     img {
         height: 100px;
         object-fit: cover;
