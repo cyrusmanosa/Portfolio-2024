@@ -65,9 +65,8 @@ function WPart3() {
     const Sns = styled.div`
         display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: center;
-        margin: 8% 0 0 0;
+        margin: 6% 0 0 0;
     `
     const Icon = styled.a`
         display: flex;
@@ -85,6 +84,8 @@ function WPart3() {
     const C5 = styled.div`
         grid-column: 4 / span 3;
         grid-row: 4;
+        align-items: center;
+        text-align: center;
         transition: all 1s ease-in-out;
     `
     const Copyright = styled.small`
@@ -113,6 +114,7 @@ function WPart3() {
                     <Icon href="https://www.wantedly.com/id/CyrusMan" target="_blank" rel="noopener noreferrer"><SiWantedly /></Icon>
                     <Icon href={t("cv")} target="_blank"><IoDocumentText /></Icon>
                 </Sns>
+
                 <Copyright>Copyright&nbsp;&copy;&nbsp;{currentYear}&nbsp;Cyrus Man. All rights reserved.</Copyright>
             </C5>
         </>
