@@ -8,8 +8,6 @@ import I9 from '../../assets/Project/Logo/React_Logo.png';
 import I10 from '../../assets/Project/Logo/Firebase_Logo.png';
 import I11 from '../../assets/Project/Logo/AWS_Logo.png';
 import I12 from '../../assets/Project/Logo/NFC_Logo.png';
-
-
 import G2 from '../../assets/Project/CareConnect/Group5.png';
 import L1 from '../../assets/Project/CareConnect/Level1.png';
 import L2 from '../../assets/Project/CareConnect/Level2.png';
@@ -76,7 +74,7 @@ function ITYear3() {
                 {year3_C_Data ? (
                     <ItemForShowArea>
                         <Year3P1Title>
-                            <img src={CCLogo} alt="Logo" width="250px" />
+                            <img src={CCLogo} alt="Logo" width="200px" />
                             <h1>{y3c_intro1}</h1>
                         </Year3P1Title>
 
