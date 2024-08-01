@@ -12,6 +12,111 @@ import It from "./IT/WIt"
 import styled from "@emotion/styled";
 
 function WPart2() {
+
+
+    // Emotion C3
+    const C3 = styled.div`
+        grid-column: 5 / span 2;
+        grid-row: 2;
+        z-index: 999;
+        animation: all 0.5s ease-in-out forwards;
+    `
+    const ImgBtn = styled.div`
+        height: 100%;
+        background-image: url(${ItBG});
+        background-repeat: repeat;
+        background-size: cover;
+        background-position: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        @media (min-width: 1200px) {
+            width: 300px;
+        }
+    `
+    const ItBtn = styled.div`
+        color: #fff;
+        mix-blend-mode: overlay;
+        filter: brightness(3);
+        p {
+            margin: auto;
+        }
+        font-size: 1200%;
+        @media (min-width: 1200px) {
+            font-size: 1500%;
+        }
+    `
+    // Emotion C2
+    const C2 = styled.div`
+        grid-column: 1 / span 4;
+        grid-row: 2;
+        transition: all 0.5s ease;
+        height:600px;
+        @media (min-width:975px){
+            height: 575px;
+        }
+    `
+    const InformationTitle = styled.div`
+        text-align: center;
+        margin: 1% 0.5%;
+        font-size: 200%;
+    `
+    const Horizontal = styled.div`
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+        margin-bottom: 2%;
+    `
+    const DataPart = styled.div`
+        display: flex;
+        flex-direction: column;
+        margin-left:5%;
+        @media (min-width:1000px){
+            margin-left: 10%;
+        }
+    `
+    const DataItem = styled.div`
+        font-size: 130%;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 2% 0;
+    `
+    const ItemLogo = styled.div`
+        font-size: 130%;
+        margin: 0;
+    `
+    const ItemH4a = styled.div`
+        margin: 0 0 0 5%;
+    `
+    const ItemH4b = styled.div`
+        margin: 0 0 0 2.5%;
+    `
+    const Pfimg = styled.img`
+        width: 25%;
+        border: 3px solid #000;
+        margin:0 auto 15% auto;
+        @media (min-width:1000px){
+            margin: auto;
+        }
+    `
+    const DataPartB = styled.div`
+        font-size: 130%;
+        display: flex;
+        margin-left: 10%;
+        margin-top: 5%;
+        padding: 0;
+    `
+    const IntroduceData = styled.div`
+        margin: 0.5% 0 5% 12%;
+        text-align: justify;
+        font-size: 115%;
+        width: 80%;
+    `
+
     const { t, i18n } = useTranslation();
     const [c2switch, setC2Switch] = useState(false)
     const [checkC3, setCheckC3] = useState(false)
@@ -197,107 +302,3 @@ function WPart2() {
     )
 }
 export default WPart2;
-
-
-// Emotion C3
-const C3 = styled.div`
-        grid-column: 5 / span 2;
-        grid-row: 2;
-        z-index: 999;
-        animation: all 0.5s ease-in-out forwards;
-    `
-const ImgBtn = styled.div`
-        height: 100%;
-        background-image: url(${ItBG});
-        background-repeat: repeat;
-        background-size: cover;
-        background-position: center;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 250px;
-        @media (min-width: 1200px) {
-            width: 300px;
-        }
-    `
-const ItBtn = styled.div`
-        color: #fff;
-        mix-blend-mode: overlay;
-        filter: brightness(3);
-        p {
-            margin: auto;
-        }
-        font-size: 1200%;
-        @media (min-width: 1200px) {
-            font-size: 1500%;
-        }
-    `
-// Emotion C2
-const C2 = styled.div`
-        grid-column: 1 / span 4;
-        grid-row: 2;
-        transition: all 0.5s ease;
-        height:600px;
-        @media (min-width:975px){
-            height: 575px;
-        }
-    `
-const InformationTitle = styled.div`
-        text-align: center;
-        margin: 1% 0.5%;
-        font-size: 200%;
-    `
-const Horizontal = styled.div`
-        display: flex;
-        align-items: center;
-        justify-items: center;
-        justify-content: space-between;
-        margin-bottom: 2%;
-    `
-const DataPart = styled.div`
-        display: flex;
-        flex-direction: column;
-        margin-left:5%;
-        @media (min-width:1000px){
-            margin-left: 10%;
-        }
-    `
-const DataItem = styled.div`
-        font-size: 130%;
-        display: flex;
-        align-items: center;
-        padding: 0;
-        margin: 2% 0;
-    `
-const ItemLogo = styled.div`
-        font-size: 130%;
-        margin: 0;
-    `
-const ItemH4a = styled.div`
-        margin: 0 0 0 5%;
-    `
-const ItemH4b = styled.div`
-        margin: 0 0 0 2.5%;
-    `
-const Pfimg = styled.img`
-        width: 25%;
-        border: 3px solid #000;
-        margin:0 auto 15% auto;
-        @media (min-width:1000px){
-            margin: auto;
-        }
-    `
-const DataPartB = styled.div`
-        font-size: 130%;
-        display: flex;
-        margin-left: 10%;
-        margin-top: 5%;
-        padding: 0;
-    `
-const IntroduceData = styled.div`
-        margin: 0.5% 0 5% 12%;
-        text-align: justify;
-        font-size: 115%;
-        width: 80%;
-    `
