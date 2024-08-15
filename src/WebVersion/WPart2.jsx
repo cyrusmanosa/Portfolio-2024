@@ -16,6 +16,7 @@ function WPart2() {
     const [c2switch, setC2Switch] = useState(false)
     const [checkC3, setCheckC3] = useState(false)
     const ratio = Math.round((window.outerWidth / window.innerWidth) * 100);
+
     let S1PxSize = {}
     if (ratio < 125) {
         S1PxSize = {
@@ -196,7 +197,6 @@ function WPart2() {
         </>
     )
 }
-export default WPart2;
 
 
 // Emotion C3
@@ -301,3 +301,5 @@ const IntroduceData = styled.div`
         font-size: 115%;
         width: 80%;
     `
+
+export default WPart2;
