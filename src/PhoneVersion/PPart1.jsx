@@ -86,7 +86,7 @@ function PPart1() {
 
             <DataItemEmail>
                 <ItemLogo><MdEmail /></ItemLogo>
-                <ItemH4a>Cyrusmanosa@gmail.com</ItemH4a>
+                <ItemH4a>cyrusman1207@gmail.com</ItemH4a>
             </DataItemEmail>
         </>
     );
