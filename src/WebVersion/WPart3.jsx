@@ -109,9 +109,8 @@ function WPart3() {
                 <Sns>
                     <Icon href="https://github.com/cyrusmanosa" target="_blank" rel="noopener noreferrer"><FaGithub /></Icon>
                     <Icon href="https://www.facebook.com/man.chun.779/" target="_blank" rel="noopener noreferrer"><FaFacebook /></Icon>
-                    <Icon href="https://www.instagram.com/cyrus_mkc/" target="_blank" rel="noopener noreferrer"><FaInstagram /></Icon>
+                    <Icon href="https://www.instagram.com/c_mkc_1994/" target="_blank" rel="noopener noreferrer"><FaInstagram /></Icon>
                     <Icon href="https://www.linkedin.com/in/cyrusmanmkc" target="_blank" rel="noopener noreferrer"><FaLinkedin /></Icon>
-                    <Icon href="https://www.wantedly.com/id/CyrusMan" target="_blank" rel="noopener noreferrer"><SiWantedly /></Icon>
                     <Icon href={t("cv")} target="_blank"><IoDocumentText /></Icon>
                 </Sns>
 
