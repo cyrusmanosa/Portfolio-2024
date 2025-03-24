@@ -314,9 +314,7 @@ const C2 = styled.div`
   @media (max-width: 1000px) {
     height: 650px;
   }
-  @media (max-width: 800px) {
     height: 600px;
-  }
 `;
 const InformationTitle = styled.div`
   text-align: center;
