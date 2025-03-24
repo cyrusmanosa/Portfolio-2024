@@ -38,6 +38,9 @@ function App() {
     @media (min-width: 2050px) {
       width: 50%;
     }
+    @media (min-width: 2550px) {
+      width: 40%;
+    }
   `
 
   const minWidth800px = window.matchMedia("(min-width: 800px)").matches;

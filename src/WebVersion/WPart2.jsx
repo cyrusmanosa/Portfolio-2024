@@ -311,6 +311,9 @@ const C2 = styled.div`
   grid-column: 1 / span 4;
   grid-row: 2;
   transition: all 0.5s ease;
+  @media (min-width: 3000px) {
+    height: 700px;
+  }
   @media (max-width: 1000px) {
     height: 650px;
   }
