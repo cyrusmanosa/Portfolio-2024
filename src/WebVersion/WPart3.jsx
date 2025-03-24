@@ -29,25 +29,22 @@ function WPart3() {
         z-index: 1;
     `
     const Title1 = styled.p`
-        line-height: 105%;
-        margin: -1.5% 0 0 0;
-        font-size: 350%;
+        line-height: 50%;
+        text-align: center;
+        font-size: 300%;
+        margin: 2.5%;
         @media(min-width:850px){
-            font-size: 400%;
+            font-size: 350%;
         }
         @media(min-width:1200px){
-            font-size: 450%;
+            font-size: 400%;
         }
+            span{
+                font-size:60%;
+            }
     `
-    const Title2 = styled.p`
-        margin: -3% 0 0 0;
-        font-size: 250%;
-        @media(min-width:850px){
-            font-size: 300%;
-        }
-    `
+
     const Img2Btn = styled.div`
-        width: 100%;
         background-image: url(${BgC4});
         background-repeat: repeat;
         background-position: 50% 30%;
@@ -66,7 +63,12 @@ function WPart3() {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: 6% 0 0 0;
+        align-items: center;
+        @media(max-width:2200px){
+        margin:6% 0 0 0;
+        }
+        margin:3% 0 0 0;
+    }
     `
     const Icon = styled.a`
         display: flex;
@@ -91,7 +93,10 @@ function WPart3() {
     const Copyright = styled.small`
         display:flex;
         justify-content:center;
-        margin:2.5% auto 0 auto;
+        @media(max-width:2200px){
+            margin:2.5% auto 0 auto;
+            }
+            margin:2.5% auto 2.5% auto;
     `
     return (
         <>
@@ -99,8 +104,7 @@ function WPart3() {
             <C4 className="grid-item" onClick={handleOpenNewTab}>
                 <Img2Btn>
                     <Ver1Btn>
-                        <Title1>Video Creator</Title1>
-                        <Title2>&#123;Portfolio Ver.1 &#125;</Title2>
+                        <Title1>Video Creator<br /><span>Portfolio Ver.1</span></Title1>
                     </Ver1Btn>
                 </Img2Btn>
             </C4>

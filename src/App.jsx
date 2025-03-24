@@ -3,6 +3,7 @@ import Part1 from "./WebVersion/WPart1"
 import Part2 from "./WebVersion/WPart2"
 import Part3 from "./WebVersion/WPart3"
 import Phone from "./PhoneVersion/PhoneVer"
+
 function App() {
   const Container = styled.div`
     display: grid;
@@ -30,6 +31,12 @@ function App() {
     }
     @media (min-width: 1450px) {
       width: 65%;
+    }
+    @media (min-width: 1650px) {
+      width: 55%;
+    }
+    @media (min-width: 2050px) {
+      width: 50%;
     }
   `
 
