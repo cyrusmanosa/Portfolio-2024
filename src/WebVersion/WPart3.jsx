@@ -104,7 +104,7 @@ function WPart3() {
             <C4 className="grid-item" onClick={handleOpenNewTab}>
                 <Img2Btn>
                     <Ver1Btn>
-                        <Title1>Video Creator<br /><span>Portfolio Ver.1</span></Title1>
+                        <Title1>Video Creator<br /><span>Portfolio</span></Title1>
                     </Ver1Btn>
                 </Img2Btn>
             </C4>
