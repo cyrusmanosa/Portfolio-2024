@@ -30,7 +30,7 @@ function ITYear3() {
     // 2
     const [year3_C_H, setYear3_C_H] = useState(100)
     const [year3_C_Data, setyear3_C_Data] = useState(false)
-    const HandleYear3P = () => {
+    const HandleYear3Portfoilo = () => {
         if (year3_P_H == 100) {
             setYear3_P_H(year3_P_H + 100)
             setyear3_P_Data(true);
@@ -39,15 +39,19 @@ function ITYear3() {
             setyear3_P_Data(false);
         }
     }
-    const HandleYear3C = () => {
+
+    const HandleYear3CareConnect = () => {
+        const match3200 = window.matchMedia("(min-width: 3200px)").matches;
+        const addHeight = match3200 ? 1400 : 1350
         if (year3_C_H == 100) {
-            setYear3_C_H(year3_C_H + 1350)
+            setYear3_C_H(year3_C_H + addHeight)
             setyear3_C_Data(true);
         } else {
             setYear3_C_H(100)
             setyear3_C_Data(false);
         }
     }
+
     const front = t("frontTitle");
     const back = t("backTitle");
     const db = t("dbTitle");
@@ -55,7 +59,7 @@ function ITYear3() {
     return (
         <>
             {/* Portfoilo */}
-            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3P} style={{ height: `${year3_P_H}px` }}>
+            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3Portfoilo} style={{ height: `${year3_P_H}px` }}>
                 <TitleH2>{y3p_title}</TitleH2>
                 {year3_P_Data ? (
                     <ItemForShowArea>
@@ -69,7 +73,7 @@ function ITYear3() {
             </ItemArea>
 
             {/* Care Connect */}
-            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3C} style={{ height: `${year3_C_H}px` }}>
+            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3CareConnect} style={{ height: `${year3_C_H}px` }}>
                 <TitleH2>{y3c_title}</TitleH2>
                 {year3_C_Data ? (
                     <ItemForShowArea>

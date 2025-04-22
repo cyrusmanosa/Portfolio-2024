@@ -33,13 +33,15 @@ function ITYear2() {
     const [year2H, setYear2H] = useState(100)
     const [year2Data, setYear2Data] = useState(false)
     const HandleYear2 = () => {
-        if (year2H == 100) {
-            setYear2H(year2H + 1250)
-            setYear2Data(true);
-        } else {
-            setYear2H(100)
-            setYear2Data(false);
-        }
+        const match3200 = window.matchMedia("(min-width: 3200px)").matches;
+        const addHeight = match3200 ? 1325 : 1250
+            if (year2H == 100) {
+                setYear2H(year2H + addHeight)
+                setYear2Data(true);
+            } else {
+                setYear2H(100)
+                setYear2Data(false);
+            }
     }
     return (
         <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear2} style={{ height: `${year2H}px` }}>

@@ -9,6 +9,7 @@ export const ItemArea = styled.div`
     border-radius: 10px;
     transition: all 0.5s ease;
 `
+
 export const TitleH2 = styled.h1`
     margin: 2.5% 0 2.5% 0;
 `
@@ -24,7 +25,7 @@ export const ItemForShowArea = styled.div`
 `
 
 export const ClickMsg = styled.p`
-    margin: 0;
+    margin: -2% 0 0 0;
 `
 
 export const Intro = styled.p`

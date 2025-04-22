@@ -14,13 +14,15 @@ function ITYear1() {
     const [year1H, setYear1H] = useState(100)
     const [year1Data, setYear1Data] = useState(false)
     const HandleYear1 = () => {
-        if (year1H == 100) {
-            setYear1H(year1H + 450)
-            setYear1Data(true);
-        } else {
-            setYear1H(100)
-            setYear1Data(false);
-        }
+        const match3200 = window.matchMedia("(min-width: 3200px)").matches;
+        const addHeight = match3200 ? 500 : 450
+            if (year1H == 100) {
+                setYear1H(year1H + addHeight)
+                setYear1Data(true);
+            } else {
+                setYear1H(100)
+                setYear1Data(false);
+            }
     }
 
     return (
