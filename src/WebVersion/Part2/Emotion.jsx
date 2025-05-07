@@ -69,14 +69,14 @@ export const DataPart = styled.div`
   }
 `;
 export const DataItem = styled.div`
-  font-size: 130%;
+  font-size: 120%;
   display: flex;
   align-items: center;
   padding: 0;
   margin: 2% 0;
 `;
 export const ItemLogo = styled.div`
-  font-size: 130%;
+  font-size: 120%;
   margin: 0;
 `;
 export const ItemH4a = styled.div`
@@ -90,16 +90,17 @@ export const Pfimg = styled.img`
   border: 3px solid #000;
   margin: 0 auto 15% auto;
   @media (min-width: 1000px) {
-    margin: 10%;
+    margin: 5% 10%;
   }
   @media (min-width: 1000px) {
     width: 20%;
   }
 `;
 export const DataPartB = styled.div`
-  font-size: 130%;
+  font-size: 120%;
   display: flex;
   margin-left: 10%;
+  margin-top: 2%;
   @media (max-width: 1800px) {
     margin-top: 5%;
   }
