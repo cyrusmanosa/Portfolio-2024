@@ -1,26 +1,11 @@
 import { useTranslation } from 'react-i18next'
-import styled from '@emotion/styled'
-
+import { C1, LanguageBar } from "./Emotion"
 function WPart1() {
+    const { i18n, t } = useTranslation();
     const handleChangeLanguage = (lang) => {
         i18n.changeLanguage(lang);
     };
-    const { i18n, t } = useTranslation();
-    const LanguageBar = styled.div`
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-        position: relative;
-        width: 20%;
-        margin: 0 1% 0 0;
-    `
-    const C1 = styled.div`
-        grid-column: 1 / span 6;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: var(--bgc);
-    `
+
     return (
         <C1 className="grid-item">
             <div className={i18n.language === "en" ? "TopEngName" : "TopName"}>

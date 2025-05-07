@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
-import Part1 from "./WebVersion/WPart1"
-import Part2 from "./WebVersion/WPart2"
-import Part3 from "./WebVersion/WPart3"
+import Part1 from "./WebVersion/Part1/Part1"
+import Part2 from "./WebVersion/Part2/Part2"
+import Part3 from "./WebVersion/Part3/Part3"
 import Phone from "./PhoneVersion/PhoneVer"
 
 function App() {

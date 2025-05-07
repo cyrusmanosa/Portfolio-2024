@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import Clock from './Clock';
-import PPart1 from './PPart1';
-import PPart2 from './PPart2';
-import PPart3 from './PPart3';
-import PPart4 from './PPart4';
-import PPart5 from './PPart5';
+import PPart1 from './Part1';
+import PPart2 from './Part2';
+import PPart3 from './Part3';
+import PPart4 from './Part4';
+import PPart5 from './Part5';
 
 function phone() {
     const Bg = styled.div`

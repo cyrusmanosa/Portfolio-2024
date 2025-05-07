@@ -1,54 +1,56 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import styled from '@emotion/styled';
-import I4 from '../../assets/Project/Logo/Golang_Logo.png';
-import I6 from '../../assets/Project/Logo/Github_Logo.png';
-import I8 from '../../assets/Project/Logo/Figma_Logo.png';
-import I9 from '../../assets/Project/Logo/React_Logo.png';
-import I10 from '../../assets/Project/Logo/Firebase_Logo.png';
-import I11 from '../../assets/Project/Logo/AWS_Logo.png';
-import I12 from '../../assets/Project/Logo/NFC_Logo.png';
-import G2 from '../../assets/Project/CareConnect/Group5.png';
-import L1 from '../../assets/Project/CareConnect/Level1.png';
-import L2 from '../../assets/Project/CareConnect/Level2.png';
-import Web from '../../assets/Project/CareConnect/Web.png';
-import CCLogo from '../../assets/Project/CareConnect/logo.png';
+import I4 from '../../../assets/Project/Logo/Golang_Logo.png';
+import I6 from '../../../assets/Project/Logo/Github_Logo.png';
+import I8 from '../../../assets/Project/Logo/Figma_Logo.png';
+import I9 from '../../../assets/Project/Logo/React_Logo.png';
+import I10 from '../../../assets/Project/Logo/Firebase_Logo.png';
+import I11 from '../../../assets/Project/Logo/AWS_Logo.png';
+import I12 from '../../../assets/Project/Logo/NFC_Logo.png';
+import G2 from '../../../assets/Project/CareConnect/Group5.png';
+import L1 from '../../../assets/Project/CareConnect/Level1.png';
+import L2 from '../../../assets/Project/CareConnect/Level2.png';
+import Web from '../../../assets/Project/CareConnect/Web.png';
+import CCLogo from '../../../assets/Project/CareConnect/logo.png';
 
 import {
     ItemArea, TitleH2, ItemForShowArea, ClickMsg,
-    SystemImg, SystemComposition, Software
-} from './IT-Emotion'
+    SystemImg, SystemComposition, Software,
+    Year3_P_Msg, Year3P1Title, Year3ImgArea, Year3P2Title, Year3P2, Year3SoftwareName
+} from './Emotion'
 
 function ITYear3() {
     const { t, i18n } = useTranslation();
     // Year 3
     const { y3p_title, y3p_intro } = t("portfolio.year3.portfolio2024");
     const { y3c_title, y3c_intro1, y3c_intro2, y3c_intro3, y3c_title3, y3c_workloadTitle, y3c_workload } = t("portfolio.year3.careconnect");
+    
     // 1
-    const [year3_P_H, setYear3_P_H] = useState(100)
-    const [year3_P_Data, setyear3_P_Data] = useState(false)
+    const [P_H, setP_H] = useState(100)
+    const [P_Data, setP_Data] = useState(false)
+
     // 2
-    const [year3_C_H, setYear3_C_H] = useState(100)
-    const [year3_C_Data, setyear3_C_Data] = useState(false)
-    const HandleYear3Portfoilo = () => {
-        if (year3_P_H == 100) {
-            setYear3_P_H(year3_P_H + 100)
-            setyear3_P_Data(true);
+    const [C_H, setC_H] = useState(100)
+    const [C_Data, setC_Data] = useState(false)
+    const PortfoiloHandle = () => {
+        if (P_H == 100) {
+            setP_H(P_H + 100)
+            setP_Data(true);
         } else {
-            setYear3_P_H(100)
-            setyear3_P_Data(false);
+            setP_H(100)
+            setP_Data(false);
         }
     }
 
-    const HandleYear3CareConnect = () => {
+    const CareConnectHandle = () => {
         const match3200 = window.matchMedia("(min-width: 3200px)").matches;
         const addHeight = match3200 ? 1400 : 1350
-        if (year3_C_H == 100) {
-            setYear3_C_H(year3_C_H + addHeight)
-            setyear3_C_Data(true);
+        if (C_H == 100) {
+            setC_H(C_H + addHeight)
+            setC_Data(true);
         } else {
-            setYear3_C_H(100)
-            setyear3_C_Data(false);
+            setC_H(100)
+            setC_Data(false);
         }
     }
 
@@ -59,9 +61,9 @@ function ITYear3() {
     return (
         <>
             {/* Portfoilo */}
-            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3Portfoilo} style={{ height: `${year3_P_H}px` }}>
+            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={PortfoiloHandle} style={{ height: `${P_H}px` }}>
                 <TitleH2>{y3p_title}</TitleH2>
-                {year3_P_Data ? (
+                {P_Data ? (
                     <ItemForShowArea>
                         <Year3_P_Msg>
                             {y3p_intro}
@@ -73,9 +75,9 @@ function ITYear3() {
             </ItemArea>
 
             {/* Care Connect */}
-            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear3CareConnect} style={{ height: `${year3_C_H}px` }}>
+            <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={CareConnectHandle} style={{ height: `${C_H}px` }}>
                 <TitleH2>{y3c_title}</TitleH2>
-                {year3_C_Data ? (
+                {C_Data ? (
                     <ItemForShowArea>
                         <Year3P1Title>
                             <img src={CCLogo} alt="Logo" width="200px" />
@@ -146,61 +148,3 @@ function ITYear3() {
 }
 
 export default ITYear3;
-
-const Year3_P_Msg = styled.p`
-      text-align: center;
-      width: 85%;
-      margin: 0 auto 15px auto;
-      font-size: 16px;
-`
-
-const Year3P1Title = styled.div`
-    margin:2.5% 0; 
-    letterSpacing: 3;
-    h1{
-        margin:0;
-        font-size:30px;
-    }
-`
-const Year3ImgArea = styled.div`
-    padding: 0 10px;
-    margin-bottom:2.5%;
-    img {
-        height: 100px;
-        object-fit: cover;
-        margin: 0 5px;
-    }
-    @media (min-width: 1350px) {
-        padding: 0 20px;
-        img {
-            height: 150px;
-            object-fit: cover;
-        }
-    }
-`
-const Year3P2Title = styled.h2`
-        color: #B22222;
-        margin: 0;
-        padding: 0;
-        line-height: 40px;
-        font-weight: 900;
-`
-
-const Year3P2 = styled.div`
-    background-color: #B22222;
-    width: 75%;
-    margin: 2% auto;
-    padding: 10px 20px;
-    border-radius: 10px;
-    h3 {
-        color: white;
-    }
-`
-
-const Year3SoftwareName = styled.th`
-    color: #B22222;
-    font-weight: 900;
-    font-size: 25px;
-    width: 200px;
-`
-

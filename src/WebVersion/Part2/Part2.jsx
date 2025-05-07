@@ -5,11 +5,10 @@ import { FaBirthdayCake } from "react-icons/fa";
 import { IoHeart } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-import PortfoiloImg from "../assets/Portfoilo.jpeg";
-import ItBG from "../assets/ItBg.jpeg";
-import Tc from "./Wtimeline";
+import PortfoiloImg from "../../assets/Portfoilo.jpeg";
+import Tc from "./timeline";
 import It from "./IT/WIt";
-import styled from "@emotion/styled";
+import { C3, ImgBtn, ItBtn, C2, InformationTitle, Horizontal, DataPart, DataItem, ItemLogo, ItemH4a, ItemH4b, Pfimg, DataPartB, IntroduceData } from "./Emotion";
 
 function WPart2() {
   const { t, i18n } = useTranslation();
@@ -125,7 +124,6 @@ function WPart2() {
     return () => {
       i18n.off("languageChanged", handleLanguageChange);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n]);
   //----------------------------------------------------------------
 
@@ -133,15 +131,11 @@ function WPart2() {
     <>
       {/* C2 */}
       <C2 className="grid-item" id="pc2" onMouseEnter={C2HandleOnMouseEnter}>
-        <InformationTitle
-          className={
-            i18n.language === "zh" || i18n.language === "ja"
-              ? "TcAndJaFon700"
-              : ""
-          }
-        >
+
+        <InformationTitle className={ i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : "" }>
           {t("title")}
         </InformationTitle>
+
         <Horizontal>
           <DataPart>
             {/* Birthday */}
@@ -208,13 +202,9 @@ function WPart2() {
               </ItemH4a>
             </DataItem>
           </DataPart>
+
           {/* pic */}
-          <Pfimg
-            src={PortfoiloImg}
-            alt="Img"
-            className="PortfoiloImg"
-            onMouseEnter={C2HandleOnMouseEnter}
-          />
+          <Pfimg src={PortfoiloImg} alt="Img" className="PortfoiloImg" onMouseEnter={C2HandleOnMouseEnter}/>
         </Horizontal>
 
         {/* Introduce */}
@@ -232,6 +222,7 @@ function WPart2() {
             {t("itemIntro")} :
           </ItemH4b>
         </DataPartB>
+        
         <IntroduceData
           className={
             i18n.language === "zh" || i18n.language === "ja"
@@ -267,120 +258,10 @@ function WPart2() {
           <div id="pc3-part2"></div>
         )}
       </C3>
+
     </>
   );
 }
 
-// Emotion C3
-const C3 = styled.div`
-  grid-column: 5 / span 2;
-  grid-row: 2;
-  z-index: 999;
-  animation: all 0.5s ease-in-out forwards;
-`;
-const ImgBtn = styled.div`
-  height: 100%;
-  background-image: url(${ItBG});
-  background-repeat: repeat;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  @media (min-width: 1200px) {
-    width: 300px;
-  }
-`;
-const ItBtn = styled.div`
-  color: #fff;
-  mix-blend-mode: overlay;
-  filter: brightness(3);
-  p {
-    margin: auto;
-  }
-  font-size: 1200%;
-  @media (min-width: 1200px) {
-    font-size: 1500%;
-  }
-`;
-
-// Emotion C2
-const C2 = styled.div`
-  grid-column: 1 / span 4;
-  grid-row: 2;
-  transition: all 0.5s ease;
-  @media (min-width: 3000px) {
-    height: 700px;
-  }
-  @media (max-width: 1000px) {
-    height: 650px;
-  }
-    height: 600px;
-`;
-const InformationTitle = styled.div`
-  text-align: center;
-  margin: 1% 0.5%;
-  font-size: 200%;
-`;
-const Horizontal = styled.div`
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  justify-content: space-between;
-`;
-
-const DataPart = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 5%;
-  @media (min-width: 1000px) {
-    margin-left: 10%;
-  }
-`;
-const DataItem = styled.div`
-  font-size: 130%;
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin: 2% 0;
-`;
-const ItemLogo = styled.div`
-  font-size: 130%;
-  margin: 0;
-`;
-const ItemH4a = styled.div`
-  margin: 0 0 0 5%;
-`;
-const ItemH4b = styled.div`
-  margin: 0 0 0 2.5%;
-`;
-const Pfimg = styled.img`
-  width: 25%;
-  border: 3px solid #000;
-  margin: 0 auto 15% auto;
-  @media (min-width: 1000px) {
-    margin: 10%;
-  }
-  @media (min-width: 1000px) {
-    width: 20%;
-  }
-`;
-const DataPartB = styled.div`
-  font-size: 130%;
-  display: flex;
-  margin-left: 10%;
-  @media (max-width: 1800px) {
-    margin-top: 5%;
-  }
-  padding: 0;
-`;
-const IntroduceData = styled.div`
-  margin: 0.5% 0 5% 12%;
-  text-align: justify;
-  font-size: 115%;
-  width: 80%;
-`;
 
 export default WPart2;

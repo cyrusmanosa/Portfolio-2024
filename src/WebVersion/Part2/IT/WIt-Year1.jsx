@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import styled from '@emotion/styled';
-import Original from '../../assets/original.png';
+import Original from '../../../assets/original.png';
 
 import {
-    ItemArea, TitleH2, ItemForShowArea, ClickMsg
-} from './IT-Emotion'
+    ItemArea, TitleH2, ItemForShowArea, ClickMsg,
+    Year1Img, Year1Msg
+} from './Emotion'
 
 function ITYear1() {
     const { t, i18n } = useTranslation();
@@ -47,18 +47,3 @@ function ITYear1() {
 
 export default ITYear1;
 
-//  Year 1
-const Year1Img = styled.img`
-    margin: 20px auto;
-    padding: 10px;
-    background-color: white;
-    border: 2px solid #000;
-    border-radius: 10px;
-`
-
-const Year1Msg = styled.p`
-      text-align: left;
-      width: 85%;
-      margin: 0 auto 20px auto;
-      font-size: 18px;
-`
