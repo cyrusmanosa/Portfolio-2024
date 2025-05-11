@@ -4,7 +4,7 @@ import ItBG from "../../assets/ItBg.jpeg";
 // Emotion C3
 export const C3 = styled.div`
   grid-column: 5 / span 2;
-  grid-row: 2;
+  grid-row: 2/3;
   z-index: 999;
   animation: all 0.5s ease-in-out forwards;
 `;
@@ -39,7 +39,7 @@ export const ItBtn = styled.div`
 // Emotion C2
 export const C2 = styled.div`
   grid-column: 1 / span 4;
-  grid-row: 2;
+  grid-row: 2/3;
   transition: all 0.5s ease;
   @media (min-width: 3000px) {
     height: 700px;

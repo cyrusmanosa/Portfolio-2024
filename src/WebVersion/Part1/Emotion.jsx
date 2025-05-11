@@ -9,7 +9,7 @@ width: 20%;
 margin: 0 1% 0 0;
 `
 export const C1 = styled.div`
-grid-column: 1 / span 6;
+grid-column: 1 / -1;
 display: flex;
 justify-content: space-between;
 align-items: center;

@@ -1,10 +1,12 @@
 import styled from '@emotion/styled';
 import BgC4 from '../../assets/c4.png';
 
+export const Part3 = styled.div`
+`
+
 // C4
 export const C4 = styled.div`
         grid-column: 1 / span 3;
-        grid-row: 4;
         transition: all 0.5s ease;
     `
 export const Ver1Btn = styled.div`
@@ -48,6 +50,12 @@ export const Img2Btn = styled.div`
         }
     `
 // C5
+export const C5 = styled.div`
+            grid-column: 4 / span 3;
+            align-items: center;
+            text-align: center;
+            transition: all 1s ease-in-out;
+        `
 export const Sns = styled.div`
         display: flex;
         flex-direction: row;
@@ -71,13 +79,6 @@ export const Icon = styled.a`
         &:active {
             color: #000;
         }
-    `
-export const C5 = styled.div`
-        grid-column: 4 / span 3;
-        grid-row: 4;
-        align-items: center;
-        text-align: center;
-        transition: all 1s ease-in-out;
     `
 export const Copyright = styled.small`
         display:flex;

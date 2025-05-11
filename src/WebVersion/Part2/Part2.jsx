@@ -6,7 +6,7 @@ import { IoHeart } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import PortfoiloImg from "../../assets/Portfoilo.jpeg";
-import Tc from "./timeline";
+import TimeLine from "./timeline";
 import It from "./IT/WIt";
 import { C3, ImgBtn, ItBtn, C2, InformationTitle, Horizontal, DataPart, DataItem, ItemLogo, ItemH4a, ItemH4b, Pfimg, DataPartB, IntroduceData } from "./Emotion";
 
@@ -32,71 +32,53 @@ function WPart2() {
   }
 
   // JS c2
-  let previousMousePosition = null;
-
-  const C2HandleOnMouseEnter = (event) => {
-    const pc2Element = document.getElementById("pc2");
-    const { top, left, bottom, right } = pc2Element.getBoundingClientRect();
-    const isOutside =
-      previousMousePosition === null ||
-      previousMousePosition.x < left ||
-      previousMousePosition.x > right ||
-      previousMousePosition.y < top ||
-      previousMousePosition.y > bottom;
-
-    if (isOutside) {
-      HandelPxSize(pc2Element, i18n.language, S1PxSize);
-    }
-    previousMousePosition = { x: event.clientX, y: event.clientY };
+  const C2HandleOnMouseEnter = () => {
+    HandelPxSize(document.getElementById("pc2"), i18n.language, S1PxSize);
     setC2Switch(true);
 
     const pc3Element = document.getElementById("pc3");
-    pc3Element.addEventListener("mouseenter", C3HandleOnMouseEnter);
-    pc3Element.addEventListener("mouseleave", C3HandleOnMouseLeave);
+    pc3Element.addEventListener("mouseenter", C3OnMouseEnter);
+    pc3Element.addEventListener("mouseleave", C3OnMouseLeave);
   };
 
   // JS c3
-  const C3HandleOnMouseEnter = () => {
+  const C3OnMouseEnter = () => {
     setTimeout(() => {
       const pc3Element = document.getElementById("pc3");
-      const pc3ImgElement = document.getElementById("pc3-img");
+      const pc3Img = document.getElementById("pc3-img");
       pc3Element.style.height = "100%";
       pc3Element.style.gridColumn = "1 / span 6";
-      pc3ImgElement.style.width = "100%";
-      pc3ImgElement.style.height = "200px";
+      pc3Img.style.width = "100%";
+      pc3Img.style.height = "200px";
       document.getElementById("it-btn").style.margin = "0 0 3% 0";
       setCheckC3(true);
       setC2Switch(false);
     }, 300);
   };
 
-  const C3HandleOnMouseLeave = () => {
+  const C3OnMouseLeave = () => {
     setTimeout(() => {
-      const pc2Element = document.getElementById("pc2");
-      HandelPxSize(pc2Element, i18n.language, S1PxSize);
       const pc3Element = document.getElementById("pc3");
-      const pc3ImgElement = document.getElementById("pc3-img");
+      const pc3Img = document.getElementById("pc3-img");
+      
+      HandelPxSize(document.getElementById("pc2"), i18n.language, S1PxSize);
       HandelPxSize(pc3Element, i18n.language, S1PxSize);
       pc3Element.style.gridColumn = "5 / span 2";
-      pc3ImgElement.style.width = "300px";
-      pc3ImgElement.style.height = "100%";
+      pc3Img.style.width = "300px";
+      pc3Img.style.height = "100%";
+      document.getElementById("it-btn").style.margin = "auto";
       setC2Switch(true);
       setCheckC3(false);
     }, 300);
   };
 
   const HandelPxSize = (Element, lng, PxSize) => {
-    const match1650 = window.matchMedia("(min-width: 1650px)").matches;
-    const match1350 = window.matchMedia("(min-width: 1350px)").matches;
-    const match850 = window.matchMedia("(min-width: 850px)").matches;
-    if (match1650) {
+    if (window.matchMedia("(min-width: 1650px)").matches) {
       Element.style.height = PxSize[lng][1650];
-    } else if (match1350) {
+    } else if (window.matchMedia("(min-width: 1350px)").matches) {
       Element.style.height = PxSize[lng][1350];
-    } else if (match850) {
+    } else if (window.matchMedia("(min-width: 850px)").matches) {
       Element.style.height = PxSize[lng][850];
-    } else {
-      Element.style.height = PxSize[lng]["under"];
     }
   };
 
@@ -112,20 +94,16 @@ function WPart2() {
     return age;
   };
 
-  //----------------------------------------------------------------
   useEffect(() => {
     const handleLanguageChange = (lng) => {
-      const pc2Element = document.getElementById("pc2");
-      const pc3Element = document.getElementById("pc3");
-      HandelPxSize(pc2Element, lng, S1PxSize);
-      HandelPxSize(pc3Element, lng, S1PxSize);
+      HandelPxSize(document.getElementById("pc2"), lng, S1PxSize);
+      HandelPxSize(document.getElementById("pc3"), lng, S1PxSize);
     };
     i18n.on("languageChanged", handleLanguageChange);
     return () => {
       i18n.off("languageChanged", handleLanguageChange);
     };
   }, [i18n]);
-  //----------------------------------------------------------------
 
   return (
     <>
@@ -236,7 +214,7 @@ function WPart2() {
         {/* Extend */}
         {c2switch ? (
           <div id="extend">
-            <Tc />
+            <TimeLine />
           </div>
         ) : (
           <div id="extend"></div>
@@ -258,7 +236,6 @@ function WPart2() {
           <div id="pc3-part2"></div>
         )}
       </C3>
-
     </>
   );
 }
