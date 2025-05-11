@@ -1,13 +1,16 @@
 import styled from "@emotion/styled";
 import ItBG from "../../assets/ItBg.jpeg";
 
+export const Part2 = styled.div`
+  grid-template-columns: 80px 200px auto 40px;
+`
+
 // Emotion C3
 export const C3 = styled.div`
-  grid-column: 5 / span 2;
-  grid-row: 2;
   z-index: 999;
   animation: all 0.5s ease-in-out forwards;
 `;
+
 export const ImgBtn = styled.div`
   height: 100%;
   background-image: url(${ItBG});
@@ -23,7 +26,7 @@ export const ImgBtn = styled.div`
     width: 300px;
   }
 `;
-export const ItBtn = styled.div`
+export const ItWord = styled.div`
   color: #fff;
   mix-blend-mode: overlay;
   filter: brightness(3);
@@ -38,8 +41,6 @@ export const ItBtn = styled.div`
 
 // Emotion C2
 export const C2 = styled.div`
-  grid-column: 1 / span 4;
-  grid-row: 2;
   transition: all 0.5s ease;
   @media (min-width: 3000px) {
     height: 700px;
@@ -49,6 +50,7 @@ export const C2 = styled.div`
   }
     height: 600px;
 `;
+
 export const InformationTitle = styled.div`
   text-align: center;
   margin: 1% 0.5%;

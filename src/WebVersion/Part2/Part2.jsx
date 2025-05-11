@@ -6,9 +6,9 @@ import { IoHeart } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import PortfoiloImg from "../../assets/Portfoilo.jpeg";
-import Tc from "./timeline";
+import TimeLine from "./timeline";
 import It from "./IT/WIt";
-import { C3, ImgBtn, ItBtn, C2, InformationTitle, Horizontal, DataPart, DataItem, ItemLogo, ItemH4a, ItemH4b, Pfimg, DataPartB, IntroduceData } from "./Emotion";
+import { Part2, C3, ImgBtn, ItWord, C2, InformationTitle, Horizontal, DataPart, DataItem, ItemLogo, ItemH4a, ItemH4b, Pfimg, DataPartB, IntroduceData } from "./Emotion";
 
 function WPart2() {
   const { t, i18n } = useTranslation();
@@ -19,66 +19,43 @@ function WPart2() {
   let S1PxSize = {};
   if (ratio < 125) {
     S1PxSize = {
-      en: { 1650: "1400px", 1350: "1200px", 850: "1250px", under: "1350px" },
-      zh: { 1650: "1300px", 1350: "1100px", 850: "1000px", under: "1100px" },
-      ja: { 1650: "2300px", 1350: "2000px", 850: "2100px", under: "2250px" },
+      en: { 1650: "1400px", 1350: "1200px", 850: "1250px"},
+      zh: { 1650: "1300px", 1350: "1100px", 850: "1000px"},
+      ja: { 1650: "2300px", 1350: "2000px", 850: "2100px"},
     };
   } else {
     S1PxSize = {
-      en: { 1650: "1450px", 1350: "1250px", 850: "1300px", under: "1400px" },
-      zh: { 1650: "1350px", 1350: "1150px", 850: "1050px", under: "1250px" },
-      ja: { 1650: "2250px", 1350: "2050px", 850: "2150px", under: "2300px" },
+      en: { 1650: "1450px", 1350: "1250px", 850: "1300px"},
+      zh: { 1650: "1350px", 1350: "1150px", 850: "1050px"},
+      ja: { 1650: "2250px", 1350: "2050px", 850: "2150px"},
     };
   }
 
   // JS c2
-  let previousMousePosition = null;
-
-  const C2HandleOnMouseEnter = (event) => {
-    const pc2Element = document.getElementById("pc2");
-    const { top, left, bottom, right } = pc2Element.getBoundingClientRect();
-    const isOutside =
-      previousMousePosition === null ||
-      previousMousePosition.x < left ||
-      previousMousePosition.x > right ||
-      previousMousePosition.y < top ||
-      previousMousePosition.y > bottom;
-
-    if (isOutside) {
-      HandelPxSize(pc2Element, i18n.language, S1PxSize);
-    }
-    previousMousePosition = { x: event.clientX, y: event.clientY };
+  const C2OnMouseEnter = () => {
+    HandelPxSize(document.getElementById("pc2"), i18n.language, S1PxSize);
     setC2Switch(true);
-
-    const pc3Element = document.getElementById("pc3");
-    pc3Element.addEventListener("mouseenter", C3HandleOnMouseEnter);
-    pc3Element.addEventListener("mouseleave", C3HandleOnMouseLeave);
   };
 
   // JS c3
-  const C3HandleOnMouseEnter = () => {
+  const C3OnMouseEnter = () => {
     setTimeout(() => {
       const pc3Element = document.getElementById("pc3");
       const pc3ImgElement = document.getElementById("pc3-img");
-      pc3Element.style.height = "100%";
-      pc3Element.style.gridColumn = "1 / span 6";
+      // pc3Element.style.gridColumn = "1 / span 6";
       pc3ImgElement.style.width = "100%";
-      pc3ImgElement.style.height = "200px";
-      document.getElementById("it-btn").style.margin = "0 0 3% 0";
       setCheckC3(true);
       setC2Switch(false);
     }, 300);
   };
 
-  const C3HandleOnMouseLeave = () => {
+  const C3OnMouseLeave = () => {
     setTimeout(() => {
-      const pc2Element = document.getElementById("pc2");
-      HandelPxSize(pc2Element, i18n.language, S1PxSize);
+      HandelPxSize(document.getElementById("pc2"), i18n.language, S1PxSize);
       const pc3Element = document.getElementById("pc3");
       const pc3ImgElement = document.getElementById("pc3-img");
       HandelPxSize(pc3Element, i18n.language, S1PxSize);
-      pc3Element.style.gridColumn = "5 / span 2";
-      pc3ImgElement.style.width = "300px";
+      // pc3Element.style.gridColumn = "5 / span 2";
       pc3ImgElement.style.height = "100%";
       setC2Switch(true);
       setCheckC3(false);
@@ -86,17 +63,12 @@ function WPart2() {
   };
 
   const HandelPxSize = (Element, lng, PxSize) => {
-    const match1650 = window.matchMedia("(min-width: 1650px)").matches;
-    const match1350 = window.matchMedia("(min-width: 1350px)").matches;
-    const match850 = window.matchMedia("(min-width: 850px)").matches;
-    if (match1650) {
+    if (window.matchMedia("(min-width: 1650px)").matches) {
       Element.style.height = PxSize[lng][1650];
-    } else if (match1350) {
+    } else if (window.matchMedia("(min-width: 1350px)").matches) {
       Element.style.height = PxSize[lng][1350];
-    } else if (match850) {
+    } else if (window.matchMedia("(min-width: 850px)").matches) {
       Element.style.height = PxSize[lng][850];
-    } else {
-      Element.style.height = PxSize[lng]["under"];
     }
   };
 
@@ -128,9 +100,9 @@ function WPart2() {
   //----------------------------------------------------------------
 
   return (
-    <>
+    <Part2>
       {/* C2 */}
-      <C2 className="grid-item" id="pc2" onMouseEnter={C2HandleOnMouseEnter}>
+      <C2 className="grid-item" id="pc2" onMouseEnter={C2OnMouseEnter}>
 
         <InformationTitle className={ i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : "" }>
           {t("title")}
@@ -204,7 +176,7 @@ function WPart2() {
           </DataPart>
 
           {/* pic */}
-          <Pfimg src={PortfoiloImg} alt="Img" className="PortfoiloImg" onMouseEnter={C2HandleOnMouseEnter}/>
+          <Pfimg src={PortfoiloImg} alt="Img" className="PortfoiloImg" onMouseEnter={C2OnMouseEnter}/>
         </Horizontal>
 
         {/* Introduce */}
@@ -235,31 +207,29 @@ function WPart2() {
 
         {/* Extend */}
         {c2switch ? (
-          <div id="extend">
-            <Tc />
-          </div>
+            <TimeLine />
         ) : (
-          <div id="extend"></div>
+          <div></div>
         )}
       </C2>
 
       {/* C3 */}
-      <C3 className="grid-item" id="pc3">
+      <C3 className="grid-item" id="pc3" onMouseEnter={C3OnMouseEnter} onMouseLeave={C3OnMouseLeave}>
         <ImgBtn id="pc3-img">
-          <ItBtn id="it-btn">
-            <p>IT</p>
-          </ItBtn>
+          <ItWord id="it-btn">
+            IT
+          </ItWord>
         </ImgBtn>
-        {checkC3 ? (
+
+        {/* {checkC3 ? (
           <div id="pc3-part2">
             <It />
           </div>
         ) : (
           <div id="pc3-part2"></div>
-        )}
+        )} */}
       </C3>
-
-    </>
+    </Part2>
   );
 }
 

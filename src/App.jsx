@@ -43,14 +43,21 @@ function App() {
     }
   `
 
-  const minWidth800px = window.matchMedia("(min-width: 800px)").matches;
-  if (minWidth800px) {
+  const PartArea = styled.div`
+   grid-column: 1 / -1;
+  `
+
+  if (window.matchMedia("(min-width: 800px)").matches) {
     return (
       <>
         <Container>
-          <Part1 />
-          <Part2 />
-          <Part3 />
+
+          <PartArea>
+           <Part1 />
+          </PartArea>
+
+           <Part2 />
+           <Part3 />
         </Container>
       </>
     )
