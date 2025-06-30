@@ -8,7 +8,6 @@ function App() {
   const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(6, auto);
-    grid-template-rows: repeat(6, auto);
     padding: 1px;
     margin: 3.5% auto;
     width: 100%;
@@ -46,15 +45,19 @@ function App() {
 
   if (window.matchMedia("(min-width: 800px)").matches) {
     return (
-      <Container>
-        <Part1 />
-        <Part2 />
-        <Part3 />
-      </Container>
+      <>
+        <Container>
+           <Part1 />
+           <Part2 />
+           <Part3 />
+        </Container>
+      </>
     )
   } else {
     return (
-      <Phone />
+      <>
+        <Phone />
+      </>
     );
   }
 }

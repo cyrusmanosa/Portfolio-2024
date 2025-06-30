@@ -161,7 +161,7 @@ function WPart2() {
               <ItemLogo>
                 <MdEmail />
               </ItemLogo>
-              <ItemH4a>cyrusman1207@gmail.com</ItemH4a>
+              <ItemH4a>cyrusman2025@gmail.com</ItemH4a>
             </DataItem>
 
             {/* Hobby */}
