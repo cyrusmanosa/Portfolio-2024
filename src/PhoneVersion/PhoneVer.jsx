@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import Clock from './Clock';
-import PPart1 from './Part1';
-import PPart2 from './Part2';
-import PPart3 from './Part3';
-import PPart4 from './Part4';
-import PPart5 from './Part5';
+import Part1 from './Part1';
+import Part2 from './Part2';
+import Part3 from './Part3';
+import Part4 from './Part4';
+import Part5 from './Part5';
 
 function phone() {
     const Bg = styled.div`
@@ -24,23 +24,23 @@ function phone() {
             <Bg>
                 <Clock />
                 <PartStyle>
-                    <PPart1 />
+                    <Part1 />
                 </PartStyle>
                 {/* part2 */}
                 <PartStyle>
-                    <PPart2 />
+                    <Part2 />
                 </PartStyle>
                 {/* part 3 */}
                 <PartStyle>
-                    <PPart3 />
+                    <Part3 />
                 </PartStyle>
                 {/* part 4 */}
                 <PartStyle>
-                    <PPart4 />
+                    <Part4 />
                 </PartStyle>
                 {/* part 5 */}
                 <PartStyle>
-                    <PPart5 />
+                    <Part5 />
                 </PartStyle>
             </Bg>
         </>

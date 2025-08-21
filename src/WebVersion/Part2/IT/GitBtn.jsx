@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Axios from "axios";
 import styled from '@emotion/styled';
 
 function MyDialog() {
-    const [open, setOpen] = useState(false);
     const [gitData, setGitData] = useState([]);
     const apiMyselfUrl = "https://api.github.com/users/cyrusmanosa/repos";
     useEffect(() => {
@@ -33,59 +33,69 @@ function MyDialog() {
 
     const HandleOpenUrl = (url) => {
         window.open(url, "_blank");
-        setOpen(false);
     };
-
 
     return (
         <>
-            <GitBtn onClick={() => setOpen(true)}>
-                Github Repositories List
-            </GitBtn>
+            <Accordion>
+                <AccordionSummary expandIcon={<ArrowDropDownIcon />} sx={{borderTop: '3px solid #000',borderBottom: '3px solid #000'}} aria-controls="panel2-content" id="panel2-header">
+                    <Typography component="span" sx={{ fontSize: '150%', fontFamily: '"Paytone One", "Roboto", sans-serif', fontStyle: 'normal'}}>
+                        Github Repositories List
+                    </Typography>
+                </AccordionSummary>
 
-            <Dialog open={open} onClose={() => setOpen(false)} className="DialogStyle">
-                <DialogOutline>
-                    <DialogTitle style={{ fontWeight: 900, fontSize: 20, margin: 0 }}>Cyrus Man</DialogTitle>
-                    <DialogContent className='DialogContentStyle'>
-                        {gitData.map((repo) => (
-                            <div key={repo.name}>
-                                <Button onClick={() => HandleOpenUrl(repo.html_url)} variant="contained">
-                                    {repo.name}
-                                </Button>
+                <AccordionDetails sx={{borderBottom: '3px solid #000'}}>
+                <Typography sx={{margin: 0}}>
+                    <GithubDropDownArea>
+                        <GithubItem>
+                            <h2>Project or Note</h2>
+                            {gitData.map((repo) => (
+                                <div key={repo.name}>
+                                    <button onClick={() => HandleOpenUrl(repo.html_url)} variant="contained">{repo.name}</button>
+                                </div>
+                            ))}
+                        </GithubItem>
+                        <GithubItem>
+                            <h2>Organizations</h2>
+                            <div>
+                                <button onClick={() => HandleOpenUrl("https://github.com/ECC200")} variant="contained">Care Connect</button>
                             </div>
-                        ))}
+                            <div>
+                                <button onClick={() => HandleOpenUrl("https://github.com/Ecc-asplay")} variant="contained">Asplay</button>
+                            </div>
+                            <div>
+                                <button onClick={() => HandleOpenUrl("https://github.com/DistributedOnlineShop")} variant="contained">Distributed Online Shop</button>
+                            </div>
+                        </GithubItem>
+                    </GithubDropDownArea>
+                </Typography>
+                </AccordionDetails>
 
-                        <DialogTitle style={{ fontWeight: 900, fontSize: 20, margin: 0 }}>Organizations</DialogTitle>
-                        <Button onClick={() => HandleOpenUrl("https://github.com/ECC200")} variant="contained">
-                            Care Connect
-                        </Button>
-                    </DialogContent>
-                </DialogOutline>
-            </Dialog>
+            </Accordion>
         </>
     );
 }
 
-const GitBtn = styled(Button)`
-    display: flex;
-    text-align: center;
-    width: 100%;
-    background-color: #fff;
-    padding: 1%;
-    font-size: 130%;
-    border-radius: 0;
-    text-transform: capitalize;
-    border-top: 2.5px solid #000;
-    border-bottom: 2.5px solid #000;
-    color:#000;
-    font-family: "Paytone One", sans-serif;
-    font-style: normal;
-`;
-const DialogOutline = styled.div`
-    width: 400px;
-    display:flex;
-    flex-direction: column;
+const GithubDropDownArea = styled.div`
+    display:grid;
+    grid: auto / auto auto;
     justify-content: center;
+    column-gap: 10%;
+`
+
+const GithubItem = styled.div`
+    width:115%;
+    h2{
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    };
+    button{
+        margin: 2% 0;
+        font-size: 120%;
+        border-radius: 5px;
+        width:100%;
+    }
 `
 
 export default MyDialog;
