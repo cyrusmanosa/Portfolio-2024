@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 function TimeLine() {
     const { t, i18n } = useTranslation();
     if (i18n.language === "en" || i18n.language === "zh") {
-        const { s_conpanyName, s_workTitle, s_timeRange, s_p1, s_p2, s_p3 } = t("companyList.sjm");
+        const { s_conpanyName, s_workTitle, s_timeRange, s_p1, s_p2, s_p3, s_p4 } = t("companyList.sjm");
         const { f_conpanyName, f_workTitle, f_timeRange, f_p1, f_p2 } = t("companyList.fhia");
         const { a_conpanyName, a_workTitle, a_timeRange, a_p1, a_p2 } = t("companyList.autoEdit");
 
@@ -20,6 +20,7 @@ function TimeLine() {
                                 <li>{s_p1}</li>
                                 <li>{s_p2}</li>
                                 <li>{s_p3}</li>
+                                <li>{s_p4}</li>
                             </ul>
                         </TextBox>
                     </Container>
