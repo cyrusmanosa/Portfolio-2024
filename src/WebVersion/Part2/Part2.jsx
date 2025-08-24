@@ -21,13 +21,13 @@ function WPart2() {
     S1PxSize = {
       en: { 1650: "1400px", 1350: "1200px", 850: "1250px", under: "1350px" },
       zh: { 1650: "1300px", 1350: "1100px", 850: "1000px", under: "1100px" },
-      ja: { 1650: "2300px", 1350: "2000px", 850: "2100px", under: "2250px" },
+      ja: { 1650: "2150px", 1350: "1850px", 850: "1950px", under: "2100px" },
     };
   } else {
     S1PxSize = {
       en: { 1650: "1450px", 1350: "1250px", 850: "1300px", under: "1400px" },
       zh: { 1650: "1350px", 1350: "1150px", 850: "1050px", under: "1250px" },
-      ja: { 1650: "2250px", 1350: "2050px", 850: "2150px", under: "2300px" },
+      ja: { 1650: "2100px", 1350: "1900px", 850: "2000px", under: "2150px" },
     };
   }
 
@@ -60,7 +60,7 @@ function WPart2() {
     setTimeout(() => {
       const pc3Element = document.getElementById("pc3");
       const pc3Img = document.getElementById("pc3-img");
-      
+
       HandelPxSize(document.getElementById("pc2"), i18n.language, S1PxSize);
       HandelPxSize(pc3Element, i18n.language, S1PxSize);
       pc3Element.style.gridColumn = "5 / span 2";
@@ -110,7 +110,7 @@ function WPart2() {
       {/* C2 */}
       <C2 className="grid-item" id="pc2" onMouseEnter={C2HandleOnMouseEnter}>
 
-        <InformationTitle className={ i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : "" }>
+        <InformationTitle className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""}>
           {t("title")}
         </InformationTitle>
 
@@ -182,7 +182,7 @@ function WPart2() {
           </DataPart>
 
           {/* pic */}
-          <Pfimg src={PortfoiloImg} alt="Img" className="PortfoiloImg" onMouseEnter={C2HandleOnMouseEnter}/>
+          <Pfimg src={PortfoiloImg} alt="Img" className="PortfoiloImg" onMouseEnter={C2HandleOnMouseEnter} />
         </Horizontal>
 
         {/* Introduce */}
@@ -200,7 +200,7 @@ function WPart2() {
             {t("itemIntro")} :
           </ItemH4b>
         </DataPartB>
-        
+
         <IntroduceData
           className={
             i18n.language === "zh" || i18n.language === "ja"

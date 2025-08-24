@@ -211,11 +211,12 @@ ul{
 }
 `
 const JaliTitle = styled.li`
-margin: 5% 0 0 0;
+margin: 3% 0 0 0;
 padding: 0;
 `
 const Jali = styled.li`
 list-style-type: none;
 margin: 0 0 0 1.5%;
 padding: 0;
+font-size: 15px;
 `
