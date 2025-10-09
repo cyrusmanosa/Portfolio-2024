@@ -43,7 +43,7 @@ function App() {
     }
   `
 
-  if (window.matchMedia("(min-width: 800px)").matches) {
+  if (window.matchMedia("(min-width: 850px)").matches) {
     return (
       <>
         <Container>

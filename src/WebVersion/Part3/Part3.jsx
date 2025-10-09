@@ -30,7 +30,6 @@ function WPart3() {
                     <Icon href="https://www.linkedin.com/in/cyrusmanmkc" target="_blank" rel="noopener noreferrer"><FaLinkedin /></Icon>
                     <Icon href={t("cv")} target="_blank"><IoDocumentText /></Icon>
                 </Sns>
-
                 <Copyright>Copyright&nbsp;&copy;&nbsp;{currentYear}&nbsp;Cyrus Man. All rights reserved.</Copyright>
             </C5>
         </>
