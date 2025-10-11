@@ -36,7 +36,6 @@ export const ItBtn = styled.div`
   }
 `;
 
-// Emotion C2
 export const C2 = styled.div`
   grid-column: 1 / span 4;
   grid-row: 2/3;
