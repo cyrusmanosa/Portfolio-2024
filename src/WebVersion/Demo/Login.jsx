@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
+import { LoginEmail } from "./Api/Email";
+
 function Login() {
     const [email, setEmail] = useState("");
     const [noEmail, setNoEmail] = useState(false);
@@ -21,7 +23,10 @@ function Login() {
         setNoCompany(company === "");
 
         if (isEmailValid && name !== "" && company !== "") {
-            console.log("Form submitted:", { email, name, company });
+            const result = LoginEmail(email,name,company)
+            if (!result.data.send){
+
+            }
         }
     }
 
