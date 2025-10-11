@@ -7,7 +7,7 @@ import './i18.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Login />
+    <App />
+    {/* <Login /> */}
   </React.StrictMode>
 )
