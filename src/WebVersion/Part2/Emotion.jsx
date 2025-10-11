@@ -48,7 +48,6 @@ export const C2 = styled.div`
     height: 650px;
   }
     height: 600px;
-    padding-bottom: 1%;
 `;
 export const InformationTitle = styled.div`
   text-align: center;
