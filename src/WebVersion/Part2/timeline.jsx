@@ -145,15 +145,15 @@ export default TimeLine;
 
 
 const All = styled.div`
-box-sizing: border-box;
-margin-left:9.5%;
-opacity: 0;
-animation: fadeIn 1s forwards 1s;
-@keyframes fadeIn {
-    to {
-        opacity: 1; 
+    box-sizing: border-box;
+    margin-left:9.5%;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+    @keyframes fadeIn {
+        to {
+            opacity: 1; 
+        }
     }
-}
 `
 const Timeline = styled.div`
 position: relative;
