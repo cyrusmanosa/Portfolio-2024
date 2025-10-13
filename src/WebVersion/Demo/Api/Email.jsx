@@ -1,11 +1,12 @@
 import axios from "axios"
 
-export const LoginEmail = async (email, name, company) => {
+export const LoginEmail = async (email, name, company, method) => {
     try{
         const rsp = axios.post(import.meta.env.VITE_LOGIN_EMAIL,{
             email: email,
             name: name,
-            companyname: company
+            companyname: company,
+            method: method
         });
 
         if (rsp.status !== 200){

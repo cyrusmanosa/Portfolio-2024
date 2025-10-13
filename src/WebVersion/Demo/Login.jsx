@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
-import { useState } from "react";
-import { LoginEmail } from "./Api/Email";
+import { useEffect, useState } from "react";
+import { auth, signInMethod } from "./Api/SignIn";
+import { onAuthStateChanged } from 'firebase/auth';
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ function Login() {
         return emailRegex.test(email);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const isEmailValid = validateEmail(email);
         setNoEmail(!isEmailValid);
@@ -23,28 +24,18 @@ function Login() {
         setNoCompany(company === "");
 
         if (isEmailValid && name !== "" && company !== "") {
-            const result = LoginEmail(email,name,company)
-            if (!result.data.send){
-
-            }
+            const rsp = await signInMethod("Email", name,company,email)
         }
     }
 
-    const handleFacebook = () => {
-        // Handle Facebook login
-    }
-
-    const handleGoogle = () => {
-        // Handle Google login
-    }
-
-    const handleGitHub = () => {
-        // Handle GitHub login
-    }
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, () => {});
+        return () => unsubscribe();
+    }, []);
 
     return (
         <Container>
-            <Box>
+            <Box id="LoginBox">
                 <h2>Sign in</h2>
                 <InputGroup>
                     {noEmail ? (
@@ -62,32 +53,31 @@ function Login() {
                             <ErrorMessage>Please enter your name</ErrorMessage>
                         </>
                     ):(
-                            <input type="text" id="name" value={name} placeholder="Name" onChange={(e) => setName(e.target.value)} required />
+                        <input type="text" id="name" value={name} placeholder="Name" onChange={(e) => setName(e.target.value)} required />
                     )}
 
                     {noCompany ? (
                         <>
-                            <input type="text" id="company" value={company} placeholder="company Name" onChange={(e) => setCompany(e.target.value)} required />
+                            <input type="text" id="company" value={company} placeholder="Company Name" onChange={(e) => setCompany(e.target.value)} required />
                             <ErrorMessage>Please enter your company name</ErrorMessage>
                         </>
                     ):(
-                        <input type="text" id="company" value={company} placeholder="company Name" onChange={(e) => setCompany(e.target.value)} required />
+                        <input type="text" id="company" value={company} placeholder="Company Name" onChange={(e) => setCompany(e.target.value)} required />
                     )}
 
                 </InputGroup>
                 <InputStn type="submit" onClick={handleSubmit}>Submit</InputStn>
 
                 <OrArea>
-                    <hr />
-                    <p>OR</p>
-                    <hr />
+                    <hr /><p>OR</p><hr />
                 </OrArea>
 
                 <SnsGroup>
-                    <FacebookButton onClick={handleFacebook} >Facebook</FacebookButton>
-                    <GoogleButton onClick={handleGoogle} >Google</GoogleButton>
-                    <GithubButton onClick={handleGitHub} >GitHub</GithubButton>
+                    {/* <FacebookButton onClick={signInWithFacebook} >Facebook</FacebookButton> */}
+                    <GoogleButton onClick={() => signInMethod("Google")} >Google</GoogleButton>
+                    <GithubButton onClick={() => signInMethod("Github")} >GitHub</GithubButton>
                 </SnsGroup>
+                <h4>*Sign in for record-keeping only</h4>
             </Box>
         </Container>
     );
@@ -102,14 +92,21 @@ export const Container = styled.div`
 `
 export const Box = styled.div`
     background-color: white;
-    padding: 2rem;
+    padding: 0.5rem 1.5rem 2rem 1.5rem;
     border-radius: 10px;
     width: 95%;
     max-width: 400px;
     text-align: center;
     h2 {
         font-weight: bold;
-        margin-bottom: 1.5rem;
+        padding: 0;
+        margin-botton: 0;
+    }
+    h4 {
+        text-align: left;
+        padding: 0;
+        margin: 1rem 0 0 0;
+        font-weight: normal;
     }
 `
 

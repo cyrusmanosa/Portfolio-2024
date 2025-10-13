@@ -6,7 +6,7 @@ export const LanguageBar = styled.div`
     justify-content: end;
     position: relative;
     width: 20%;
-margin: 0 1% 0 0;
+    margin: 0 1% 0 0;
 `
 export const C1 = styled.div`
     grid-column: 1 / -1;
