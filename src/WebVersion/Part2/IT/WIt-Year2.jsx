@@ -22,10 +22,10 @@ function ITYear2() {
     
     // Year 2
     const {
-        y2title,
-        y2intro1a, y2intro1b, y2intro1c,
-        y2title2, y2intro2a, y2intro2b,
-        y2title3
+        title,
+        intro1a, intro1b, intro1c,
+        title2, intro2a, intro2b,
+        title3
     } = t("portfolio.year2");
 
     const front = t("frontTitle");
@@ -37,7 +37,9 @@ function ITYear2() {
 
     const HandleYear2 = () => {
         const match3200 = window.matchMedia("(min-width: 3200px)").matches;
-        const addHeight = match3200 ? 1325 : 1250
+        const addHeight = i18n.language === 'ja'
+            ? match3200 ? 1325 : 1250
+            : match3200 ? 1250 : 1225
             if (year2H == 100) {
                 setYear2H(year2H + addHeight)
                 setYear2Data(true);
@@ -49,7 +51,7 @@ function ITYear2() {
 
     return (
         <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={HandleYear2} style={{ height: `${year2H}px` }}>
-            <TitleH2>{y2title}</TitleH2>
+            <TitleH2>{title}</TitleH2>
             {year2Data ? (
                 <ItemForShowArea>
                     <Year2P1>
@@ -59,23 +61,23 @@ function ITYear2() {
                         <div className="item">
                             <Year2P1Title>
                                 <h1>
-                                    {y2intro1a}<br /><span>{y2intro1b}</span>{y2intro1c}
+                                    {intro1a}<br /><span>{intro1b}</span>{intro1c}
                                 </h1>
-                                <h3>{y2title2}</h3>
+                                <h3>{title2}</h3>
                                 <Intro>
-                                    {y2intro2a}
+                                    {intro2a}
                                 </Intro>
                             </Year2P1Title>
                         </div>
                     </Year2P1>
 
                     <Year2P2Title>
-                        <h3>{y2intro2b}</h3>
+                        <h3>{intro2b}</h3>
                     </Year2P2Title>
 
                     <SystemImg>
                         <SystemComposition>
-                            <p>{y2title3}</p>
+                            <p>{title3}</p>
                             <img src={G1} width="60%" alt="Local System" />
                         </SystemComposition>
 

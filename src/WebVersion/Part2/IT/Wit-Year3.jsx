@@ -22,8 +22,8 @@ import {
 function ITYear3() {
     const { t, i18n } = useTranslation();
     // Year 3
-    const { y3p_title, y3p_intro } = t("portfolio.year3.portfolio2024");
-    const { y3c_title, y3c_intro1, y3c_intro2, y3c_intro3, y3c_title3, y3c_workloadTitle, y3c_workload } = t("portfolio.year3.careconnect");
+    const { title, intro } = t("portfolio.year3.portfolio2024");
+    const { c_title, c_intro1, c_intro2, c_intro3, c_title3, c_workloadTitle, c_workload } = t("portfolio.year3.careconnect");
     
     // 1
     const [P_H, setP_H] = useState(100)
@@ -44,7 +44,9 @@ function ITYear3() {
 
     const CareConnectHandle = () => {
         const match3200 = window.matchMedia("(min-width: 3200px)").matches;
-        const addHeight = match3200 ? 1400 : 1350
+        const addHeight = i18n.language === 'ja'
+            ? match3200 ? 1350 : 1300
+            : match3200 ? 1300 : 1275
         if (C_H == 100) {
             setC_H(C_H + addHeight)
             setC_Data(true);
@@ -62,11 +64,11 @@ function ITYear3() {
         <>
             {/* Portfoilo */}
             <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={PortfoiloHandle} style={{ height: `${P_H}px` }}>
-                <TitleH2>{y3p_title}</TitleH2>
+                <TitleH2>{title}</TitleH2>
                 {P_Data ? (
                     <ItemForShowArea>
                         <Year3_P_Msg>
-                            {y3p_intro}
+                            {intro}
                         </Year3_P_Msg>
                     </ItemForShowArea>
                 ) : (
@@ -76,12 +78,12 @@ function ITYear3() {
 
             {/* Care Connect */}
             <ItemArea className={i18n.language === "zh" || i18n.language === "ja" ? "TcAndJaFon700" : ""} onClick={CareConnectHandle} style={{ height: `${C_H}px` }}>
-                <TitleH2>{y3c_title}</TitleH2>
+                <TitleH2>{c_title}</TitleH2>
                 {C_Data ? (
                     <ItemForShowArea>
                         <Year3P1Title>
                             <img src={CCLogo} alt="Logo" width="200px" />
-                            <h1>{y3c_intro1}</h1>
+                            <h1>{c_intro1}</h1>
                         </Year3P1Title>
 
                         <Year3ImgArea>
@@ -90,19 +92,19 @@ function ITYear3() {
                             <img src={Web} alt="Web" />
                         </Year3ImgArea>
 
-                        <Year3P2Title>{y3c_intro2}</Year3P2Title>
+                        <Year3P2Title>{c_intro2}</Year3P2Title>
 
                         <Year3P2>
-                            <h3>{y3c_intro3}</h3>
+                            <h3>{c_intro3}</h3>
                         </Year3P2>
 
-                        <h3 style={{ margin: 0 }}>{y3c_workloadTitle} : </h3>
-                        <h2 style={{ margin: 0 }}>{y3c_workload}</h2>
+                        <h3 style={{ margin: 0 }}>{c_workloadTitle} : </h3>
+                        <h2 style={{ margin: 0 }}>{c_workload}</h2>
 
                         {/* System */}
                         <SystemImg>
                             <SystemComposition>
-                                <p>{y3c_title3}</p>
+                                <p>{c_title3}</p>
                                 <img src={G2} width="65%" alt="online System" />
                             </SystemComposition>
 

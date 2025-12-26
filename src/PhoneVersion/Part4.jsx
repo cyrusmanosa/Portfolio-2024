@@ -45,9 +45,9 @@ function PPart4() {
         font-size:80%;
     `
 
-    const { s_conpanyName, s_workTitle, s_timeRange } = t("companyList.sjm");
-    const { f_conpanyName, f_workTitle, f_timeRange } = t("companyList.fhia");
-    const { a_conpanyName, a_workTitle, a_timeRange } = t("companyList.autoEdit");
+    const { s_companyName, s_workTitle, s_timeRange } = t("companyList.sjm");
+    const { f_companyName, f_workTitle, f_timeRange } = t("companyList.fhia");
+    const { a_companyName, a_workTitle, a_timeRange } = t("companyList.autoEdit");
 
 
     return (
@@ -59,7 +59,7 @@ function PPart4() {
             {/* AutoEdit */}
             <Company>
                 <NameTitle>
-                    <CompanyTitle>{a_conpanyName}</CompanyTitle>
+                    <CompanyTitle>{a_companyName}</CompanyTitle>
                     <p>{a_workTitle}</p>
                 </NameTitle>
                 <TimeRange>{a_timeRange}</TimeRange>
@@ -68,7 +68,7 @@ function PPart4() {
             {/* AHct-Flha */}
             <Company>
                 <NameTitle>
-                    <CompanyTitle>{f_conpanyName}</CompanyTitle>
+                    <CompanyTitle>{f_companyName}</CompanyTitle>
                     <p>{f_workTitle}</p>
                 </NameTitle>
                 <TimeRange>{f_timeRange}</TimeRange>
@@ -77,7 +77,7 @@ function PPart4() {
             {/* SJM */}
             <Company>
                 <NameTitle>
-                    <CompanyTitle>{s_conpanyName}</CompanyTitle>
+                    <CompanyTitle>{s_companyName}</CompanyTitle>
                     <p>{s_workTitle}</p>
                 </NameTitle>
                 <TimeRange>{s_timeRange}</TimeRange>

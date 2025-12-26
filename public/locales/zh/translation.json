@@ -1,71 +1,79 @@
 {
     "name": "文家俊",
     "title": "IT 作品集",
-    "country": "香港",
-    "location": "元朗",
+    "country": "澳門",
+    "location": "澳門半島",
     "itemIntro": "自我介紹",
     "hobby": "攝影 , 行山",
-    "cv":"https://drive.google.com/file/d/1bGcjm6XX7spKAQ5SzNokxCiyUhtsBMXT/view?usp=drive_link",
+    "cv": "https://drive.google.com/file/d/1bGcjm6XX7spKAQ5SzNokxCiyUhtsBMXT/view?usp=drive_link",
     "intro": "本人畢業於在大阪專門學校主修 IT 開發課程，現在已回到香港。目標是成為一位有全端工程師。在進入 IT 領域之前，Cyrus 在影片製作行業擔任影片剪輯師、攝影師和多媒體設計師，專精於視覺媒體和商業影片製作。",
     "frontTitle": "前端",
     "backTitle": "後端",
     "dbTitle": "數據庫",
     "otherTitle": "其他",
+    "email": "cyrusman2025@gmail.com",
     "companyList": {
-        "sjm":{
-            "s_conpanyName": "澳博（澳門）",
-            "s_workTitle":"資深多媒體設計師",
-            "s_timeRange": "2018/09 - 2020/04",
-            "s_p1": "製作宣傳影片，突出澳門作為本地博彩企業的獨特活動。",
-            "s_p2": "製作電視廣告、YouTube頻道內容以及活動推廣及記錄影片，以提升品牌知名度和參與度。",
-            "s_p3": "在三人團隊中，負責構思、拍攝和編輯影片，並融入動態圖形，使用專業工具提升視覺吸引力",
-            "s_p4": "每月平均製作3個YouTube影片和2個活動記錄或亮點影片，提升活動參與度20%"
+        "wiz": {
+            "companyName": "唯思科技有限公司（澳門）",
+            "workTitle": "程式員",
+            "timeRange": "2025/11 - 至今",
+            "p1": "開發企業薪資系統前端，使用 Next.js 14 (Turbopack) 及公司基底模組，負責薪資計算與報表生成的 UI 與互動功能。",
+            "p2": "開發政府內部電子賀卡批量寄送系統前端，使用 Next.js (Turbopack) 及公司基底模組，實現批量寄送、模板管理、寄送記錄與權限控制介面。",
+            "p3": "採用 Tailwind CSS 與 RizzUI 進行樣式與響應式設計，利用 Turbopack 提升開發效率，並參與程式碼審查與 API 整合。"
         },
-        "fhia":{
-            "f_conpanyName": "Ahct Group - FHIA（澳門）",
-            "f_workTitle":"產品攝影師",
-            "f_timeRange": "2017/03 - 2018/03",
-            "f_p1": "拍攝產品相片及活動花絮",
-            "f_p2": "製作產品特效宣傳影片"
+        "sjm": {
+            "companyName": "澳門博彩控股有限公司（澳門）",
+            "workTitle": "資深多媒體設計師",
+            "timeRange": "2018/09 - 2020/04",
+            "p1": "製作宣傳影片，突出澳門作為本地博彩企業的獨特活動。",
+            "p2": "製作電視廣告、YouTube頻道內容以及活動推廣及記錄影片，以提升品牌知名度和參與度。",
+            "p3": "在三人團隊中，負責構思、拍攝和編輯影片，並融入動態圖形，使用專業工具提升視覺吸引力",
+            "p4": "每月平均製作3個YouTube影片和2個活動記錄或亮點影片，提升活動參與度20%"
+        },
+        "fhia": {
+            "companyName": "檀銀集團 - FHIA（澳門）",
+            "workTitle": "產品攝影師",
+            "timeRange": "2017/03 - 2018/03",
+            "p1": "拍攝產品相片及活動花絮",
+            "p2": "製作產品特效宣傳影片"
         },
         "autoEdit": {
-            "a_conpanyName": "AutoEdit.Ltd（香港）",
-            "a_workTitle":"影片製作助理",
-            "a_timeRange": "2016/09 - 2017/02",
-            "a_p1": "後期影片編輯 ",
-            "a_p2": "拍攝商業廣告、活動花絮及宣傳影片"
+            "companyName": "AutoEdit.Ltd（香港）",
+            "workTitle": "影片製作助理",
+            "timeRange": "2016/09 - 2017/02",
+            "p1": "後期影片編輯 ",
+            "p2": "拍攝商業廣告、活動花絮及宣傳影片"
         }
     },
-    "portfolio":{
-        "year1":{
-            "y1title": "一年級 - 作品集網站2022",
-            "y1msg": "這個作品集網站是大阪Ecc電腦學校就讀時，一年級所學習的HTML、CSS和JavaScript，並使用Firebase Hosting進行管理。"
+    "portfolio": {
+        "year1": {
+            "title": "一年級 - 作品集網站2022",
+            "msg": "這個作品集網站是大阪Ecc電腦學校就讀時，一年級所學習的HTML、CSS和JavaScript，並使用Firebase Hosting進行管理。"
         },
-        "year2":{
-            "y2title": "二年級 - 個人製作作品",
-            "y2intro1a": "邂逅戀愛的新浪潮！",
-            "y2intro1b": "Dating Date",
-            "y2intro1c": "在這裡找到你的命中註定",
-            "y2title2": "創新的配對系統",
-            "y2intro2a": "Dating Date 不再是基於傳統的個人資料或滑動配對，而是根據共同的興趣和愛好來設定，以找到最適合您的伴侶。",
-            "y2intro2b": "您可以通過數據庫條件匹配積極尋找最多 3 個匹配機會的用戶，並且匹配機會無限。",
-            "y2title3": "本地系統"
+        "year2": {
+            "title": "二年級 - 個人製作作品",
+            "intro1a": "邂逅戀愛的新浪潮！",
+            "intro1b": "Dating Date",
+            "intro1c": "在這裡找到你的命中註定",
+            "title2": "創新的配對系統",
+            "intro2a": "Dating Date 不再是基於傳統的個人資料或滑動配對，而是根據共同的興趣和愛好來設定，以找到最適合您的伴侶。",
+            "intro2b": "您可以通過數據庫條件匹配積極尋找最多 3 個匹配機會的用戶，並且匹配機會無限。",
+            "title3": "本地系統"
         },
-        "year3":{
-            "portfolio2024":{
-                "y3p_title": "三年級 - 作品集網站2024",
-                "y3p_intro": "從網上學習React並製作了個人作品集網站。與第一版相比，這次的UI/UX有了很大的變化，並且加入了動畫效果來顯示內容。我還製作了手機版本，相比電腦版本，手機版本的顯示更加簡潔。目前，我通過Vercel將其與Github連接並進行託管。"
+        "year3": {
+            "portfolio2024": {
+                "title": "三年級 - 作品集網站2024",
+                "intro": "從網上學習React並製作了個人作品集網站。與第一版相比，這次的UI/UX有了很大的變化，並且加入了動畫效果來顯示內容。我還製作了手機版本，相比電腦版本，手機版本的顯示更加簡潔。目前，我通過Vercel將其與Github連接並進行託管。"
             },
             "careconnect": {
-                "y3c_title": "3年生 - 前期團隊製作",
-                "y3c_intro1": "Care Connect",
-                "y3c_intro2": "NFC緊急信息系統",
-                "y3c_intro3": "使用NFC技術在緊急情況下迅速通知救護人員和家屬，並提供患者信息。這樣可以將障礙者的數據數字化，並在定期檢查時簡單訪問數據，大大提高了便利性。",
-                "y3c_title3": "線上系統",
-                "y3c_workloadTitle": "這個作品的負責部分",
-                "y3c_workload": "React.js、Go支援、畫面設計、AWS構建"
+                "c_title": "3年生 - 前期團隊製作",
+                "c_intro1": "Care Connect",
+                "c_intro2": "NFC緊急信息系統",
+                "c_intro3": "使用NFC技術在緊急情況下迅速通知救護人員和家屬，並提供患者信息。這樣可以將障礙者的數據數字化，並在定期檢查時簡單訪問數據，大大提高了便利性。",
+                "c_title3": "線上系統",
+                "c_workloadTitle": "這個作品的負責部分",
+                "c_workload": "React.js、Go支援、畫面設計、AWS構建"
             }
         }
     }
-
 }

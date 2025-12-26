@@ -19,15 +19,15 @@ function WPart2() {
   let S1PxSize = {};
   if (ratio < 125) {
     S1PxSize = {
-      en: { 1650: "1400px", 1350: "1200px", 850: "1250px", under: "1350px" },
-      zh: { 1650: "1300px", 1350: "1100px", 850: "1000px", under: "1100px" },
-      ja: { 1650: "2150px", 1350: "1850px", 850: "1950px", under: "2100px" },
+      en: { 1650: "1700px", 1350: "1500px", 850: "1550px", under: "1650px" },
+      zh: { 1650: "1500px", 1350: "1300px", 850: "1200px", under: "1300px" },
+      ja: { 1650: "2050px", 1350: "1750px", 850: "1850px", under: "2000px" },
     };
   } else {
     S1PxSize = {
-      en: { 1650: "1450px", 1350: "1250px", 850: "1300px", under: "1400px" },
-      zh: { 1650: "1350px", 1350: "1150px", 850: "1050px", under: "1250px" },
-      ja: { 1650: "2100px", 1350: "1900px", 850: "2000px", under: "2150px" },
+      en: { 1650: "1750px", 1350: "1550px", 850: "1600px", under: "1700px" },
+      zh: { 1650: "1550px", 1350: "1350px", 850: "1250px", under: "1450px" },
+      ja: { 1650: "2000px", 1350: "1800px", 850: "1900px", under: "2050px" },
     };
   }
 
@@ -161,7 +161,7 @@ function WPart2() {
               <ItemLogo>
                 <MdEmail />
               </ItemLogo>
-              <ItemH4a alt="mailto:cyrusman2025@gmail.com">cyrusman2025@gmail.com</ItemH4a>
+              <ItemH4a alt={t('email')}>{t('email')}</ItemH4a>
             </DataItem>
 
             {/* Hobby */}

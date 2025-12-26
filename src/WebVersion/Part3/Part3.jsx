@@ -10,6 +10,13 @@ function WPart3() {
         window.open("https://profile-ce15f.web.app/", "_blank");
     };
 
+    const socialLinks = [
+        { href: "https://github.com/cyrusmanosa", icon: FaGithub },
+        { href: "https://www.facebook.com/man.chun.779/", icon: FaFacebook },
+        { href: "https://www.instagram.com/c_mkc_1994/", icon: FaInstagram },
+        { href: "https://www.linkedin.com/in/cyrusmanmkc", icon: FaLinkedin },
+    ];
+
     return (
         <>
             {/* C4 */}
@@ -24,10 +31,17 @@ function WPart3() {
             {/* C5 */}
             <C5 className="grid-item">
                 <Sns>
-                    <Icon href="https://github.com/cyrusmanosa" target="_blank" rel="noopener noreferrer"><FaGithub /></Icon>
-                    <Icon href="https://www.facebook.com/man.chun.779/" target="_blank" rel="noopener noreferrer"><FaFacebook /></Icon>
-                    <Icon href="https://www.instagram.com/c_mkc_1994/" target="_blank" rel="noopener noreferrer"><FaInstagram /></Icon>
-                    <Icon href="https://www.linkedin.com/in/cyrusmanmkc" target="_blank" rel="noopener noreferrer"><FaLinkedin /></Icon>
+                    {socialLinks.map(({ href, icon: IconComponent }) => (
+                        <Icon
+                            key={href}
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={IconComponent.displayName || "Social link"}
+                        >
+                            <IconComponent />
+                        </Icon>
+                    ))}
                     <Icon href={t("cv")} target="_blank"><IoDocumentText /></Icon>
                 </Sns>
                 <Copyright>Copyright&nbsp;&copy;&nbsp;{currentYear}&nbsp;Cyrus Man. All rights reserved.</Copyright>
