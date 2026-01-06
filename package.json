@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.28.5",
+    "@sonar/scan": "^4.3.2",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.2",
@@ -49,6 +50,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.26",
     "postcss": "^8.5.6",
+    "sonarqube-scanner": "^4.3.2",
     "vite": "^7.3.0"
   }
 }
