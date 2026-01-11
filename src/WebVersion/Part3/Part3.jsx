@@ -7,7 +7,7 @@ function WPart3() {
     const { t } = useTranslation();
     const currentYear = new Date().getFullYear();
     const handleOpenNewTab = () => {
-        window.open("https://profile-ce15f.web.app/", "_blank");
+        window.open("https://profile-ce15f.web.app/", "_blank", "noopener,noreferrer");
     };
 
     const socialLinks = [

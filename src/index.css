@@ -39,7 +39,7 @@ body {
   padding: 0 2%;
   text-align: center;
   font-size: 150%;
-  .btn::hover {
+  .btn:hover {
     background-color: #b1b1b1;
     color: #fff;
   }

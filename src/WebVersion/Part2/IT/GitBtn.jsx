@@ -36,16 +36,15 @@ function MyDialog() {
     };
 
     return (
-        <>
-            <Accordion>
-                <AccordionSummary expandIcon={<ArrowDropDownIcon />} sx={{borderTop: '3px solid #000',borderBottom: '3px solid #000'}} aria-controls="panel2-content" id="panel2-header">
-                    <Typography component="span" sx={{ fontSize: '150%', fontFamily: '"Paytone One", "Roboto", sans-serif', fontStyle: 'normal'}}>
-                        Github Repositories List
-                    </Typography>
-                </AccordionSummary>
+        <Accordion>
+            <AccordionSummary expandIcon={<ArrowDropDownIcon />} sx={{ borderTop: '3px solid #000', borderBottom: '3px solid #000' }} aria-controls="panel2-content" id="panel2-header">
+                <Typography component="p" sx={{ fontSize: '150%', fontFamily: '"Paytone One", "Roboto", sans-serif', fontStyle: 'normal' }} >
+                    Github Repositories List
+                </Typography>
+            </AccordionSummary>
 
-                <AccordionDetails sx={{borderBottom: '3px solid #000'}}>
-                <Typography sx={{margin: 0}}>
+            <AccordionDetails sx={{ borderBottom: '3px solid #000000' }}>
+                <Typography sx={{ margin: 0 }} component="div">
                     <GithubDropDownArea>
                         <GithubItem>
                             <h2>Project or Note</h2>
@@ -69,10 +68,8 @@ function MyDialog() {
                         </GithubItem>
                     </GithubDropDownArea>
                 </Typography>
-                </AccordionDetails>
-
-            </Accordion>
-        </>
+            </AccordionDetails>
+        </Accordion>
     );
 }
 
