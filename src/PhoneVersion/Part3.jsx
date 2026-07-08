@@ -34,8 +34,8 @@ function PPart3() {
         font-size:80%;
     `
 
-    const { sj_name, sj_timeRange } = t("eduction.japanese");
-    const { si_name, si_timeRange } = t("eduction.it");
+    const { sj_name, sj_period } = t("eduction.japanese");
+    const { si_name, si_period } = t("eduction.it");
 
 
     return (
@@ -46,13 +46,13 @@ function PPart3() {
             <Line />
             {/* AutoEdit */}
             <School>
-                <TimeRange>{sj_timeRange}</TimeRange>
+                <TimeRange>{sj_period}</TimeRange>
                 <SchoolTitle>{sj_name}</SchoolTitle>
             </School>
 
             {/* AHct-Flha */}
             <School>
-                <TimeRange>{si_timeRange}</TimeRange>
+                <TimeRange>{si_period}</TimeRange>
                 <SchoolTitle>{si_name}</SchoolTitle>
             </School>
             <Line />

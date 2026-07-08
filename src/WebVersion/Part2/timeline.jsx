@@ -7,18 +7,18 @@ function TimeLine() {
     if (i18n.language === "en" || i18n.language === "zh") {
         const companies = [
             {
-                key: "wiz",
-                data: t("companyList.wiz"),
+                key: "job1",
+                data: t("companyList.job1"),
                 bullets: ["p1", "p2", "p3"],
             },
             {
-                key: "sjm",
-                data: t("companyList.sjm"),
+                key: "job2",
+                data: t("companyList.job2"),
                 bullets: ["p1", "p2", "p3", "p4"],
             },
             {
-                key: "fhia",
-                data: t("companyList.fhia"),
+                key: "job3",
+                data: t("companyList.job3"),
                 bullets: ["p1", "p2"],
             }
         ];
@@ -28,21 +28,21 @@ function TimeLine() {
                 <Timeline>
                     {companies.map(({ key, data, bullets }) => {
                         const {
-                            companyName,
-                            workTitle,
-                            timeRange,
+                            name,
+                            title,
+                            period,
                         } = data;
 
                         return (
                             <Container key={key}>
                                 <TextBox>
                                     <h3>
-                                        {companyName}
+                                        {name}
                                     </h3>
                                     <h3>
-                                        {workTitle}
+                                        {title}
                                     </h3>
-                                    <small>{timeRange}</small>
+                                    <small>{period}</small>
                                     <ul>
                                         {bullets.map((bulletKey) => (
                                             <li key={bulletKey}>
@@ -60,38 +60,38 @@ function TimeLine() {
     } else if (i18n.language === "ja") {
         const companies = [
             {
-                key: "sjm",
+                key: "job2",
                 hasP3c: true,
             },
             {
-                key: "fhia",
+                key: "job3",
                 hasP3c: false,
             },
             {
-                key: "autoEdit",
+                key: "job4",
                 hasP3c: false,
             }
         ];
 
         const translations = {
-            sjm: t("companyList.sjm"),
-            fhia: t("companyList.fhia"),
-            autoEdit: t("companyList.autoEdit")
+            job2: t("companyList.job2"),
+            job3: t("companyList.job3"),
+            job4: t("companyList.job4"),
         };
 
-        const renderCompany = ({ key, prefix, hasP3c, hasP4 }) => {
+        const renderCompany = ({ key, hasP3c }) => {
             const data = translations[key];
 
             return (
                 <Container key={key}>
                     <JaTextBox>
                         <h3>
-                            {data['companyName']}
+                            {data['name']}
                         </h3>
                         <h3>
-                            {data['workTitle']}
+                            {data['title']}
                         </h3>
-                        <small>{data['timeRange']}</small>
+                        <small>{data['period']}</small>
                         <ul>
                             <li>{data['titlep1']}</li>
 
@@ -125,7 +125,6 @@ function TimeLine() {
 }
 
 export default TimeLine;
-
 
 const All = styled.div`
 box-sizing: border-box;

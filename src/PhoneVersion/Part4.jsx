@@ -45,9 +45,9 @@ function PPart4() {
         font-size:80%;
     `
 
-    const { s_companyName, s_workTitle, s_timeRange } = t("companyList.sjm");
-    const { f_companyName, f_workTitle, f_timeRange } = t("companyList.fhia");
-    const { a_companyName, a_workTitle, a_timeRange } = t("companyList.autoEdit");
+    const { s_name, s_title, s_period } = t("companyList.job2");
+    const { f_name, f_title, f_period } = t("companyList.job3");
+    const { a_name, a_title, a_period } = t("companyList.job4");
 
 
     return (
@@ -56,31 +56,31 @@ function PPart4() {
                 <h4>Work&emsp;Experience</h4>
             </WorkExpTitle>
             <Line />
-            {/* AutoEdit */}
+            {/* job4 */}
             <Company>
                 <NameTitle>
-                    <CompanyTitle>{a_companyName}</CompanyTitle>
-                    <p>{a_workTitle}</p>
+                    <CompanyTitle>{a_name}</CompanyTitle>
+                    <p>{a_title}</p>
                 </NameTitle>
-                <TimeRange>{a_timeRange}</TimeRange>
+                <TimeRange>{a_period}</TimeRange>
             </Company>
 
-            {/* AHct-Flha */}
+            {/* job3 */}
             <Company>
                 <NameTitle>
-                    <CompanyTitle>{f_companyName}</CompanyTitle>
-                    <p>{f_workTitle}</p>
+                    <CompanyTitle>{f_name}</CompanyTitle>
+                    <p>{f_title}</p>
                 </NameTitle>
-                <TimeRange>{f_timeRange}</TimeRange>
+                <TimeRange>{f_period}</TimeRange>
             </Company>
 
-            {/* SJM */}
+            {/* job2 */}
             <Company>
                 <NameTitle>
-                    <CompanyTitle>{s_companyName}</CompanyTitle>
-                    <p>{s_workTitle}</p>
+                    <CompanyTitle>{s_name}</CompanyTitle>
+                    <p>{s_title}</p>
                 </NameTitle>
-                <TimeRange>{s_timeRange}</TimeRange>
+                <TimeRange>{s_period}</TimeRange>
             </Company>
             <Line />
         </>

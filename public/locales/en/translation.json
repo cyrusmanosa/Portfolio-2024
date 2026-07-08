@@ -13,34 +13,34 @@
     "otherTitle": "Other",
     "email": "cyrusman2025@gmail.com",
     "companyList": {
-        "wiz": {
-            "companyName": "WIZ Technology Co. Ltd（Macao）",
-            "workTitle": "Programmer",
-            "timeRange": "2025/11 - Now",
+        "job1": {
+            "name": "WIZ Technology Co. Ltd（Macao）",
+            "title": "Programmer",
+            "period": "2025/11 - Now",
             "p1": "Developed frontend for enterprise payroll system using Next.js 14 (Turbopack) and company base module, implementing UI and interactions for salary calculation and report generation.",
             "p2": "Built frontend for government internal e-card bulk sending system using Next.js (Turbopack) and company base module, creating interfaces for bulk sending, template management, sending records, and access control.",
             "p3": "Styled components with Tailwind CSS and RizzUI for responsive design, utilized Turbopack for faster development, and participated in code reviews and API integrations."
         },
-        "sjm": {
-            "companyName": "SJM Holdings Limited（Macao）",
-            "workTitle": "Senior Multimedia Designer",
-            "timeRange": "2018/09 - 2020/04",
+        "job2": {
+            "name": "SJM Holdings Limited（Macao）",
+            "title": "Senior Multimedia Designer",
+            "period": "2018/09 - 2020/04",
             "p1": "In SJM Holdings’ marketing department, tasked with producing promotional videos to highlight Macau’s unique events as a local gaming enterprise.",
             "p2": "Create TV commercials, YouTube channel content, and event promotion/record videos to enhance brand visibility and engagement.",
             "p3": "Within a 3-person team, conceptualised, filmed, and edited videos, incorporating motion graphics to enhance visual appeal using professional tools.",
             "p4": "Produced an average of 3 YouTube videos and 2 event record videos or highlight videos monthly, increasing event participation by 20%."
         },
-        "fhia": {
-            "companyName": "AhctGroup - FHIA（Macao）",
-            "workTitle": "Product Photographer",
-            "timeRange": "2017/03 - 2018/03",
+        "job3": {
+            "name": "AhctGroup - FHIA（Macao）",
+            "title": "Product Photographer",
+            "period": "2017/03 - 2018/03",
             "p1": "Promotion video and event photos shooting.",
             "p2": "Created motion graphic video of promotion."
         },
-        "autoEdit": {
-            "companyName": "AutoEdit.Ltd（Hong Kong）",
-            "workTitle": "Production Assistant",
-            "timeRange": "2016/09 - 2017/02",
+        "job4": {
+            "name": "AutoEdit.Ltd（Hong Kong）",
+            "title": "Production Assistant",
+            "period": "2016/09 - 2017/02",
             "p1": "Advertising and event video shooting.",
             "p2": "Promotion video and event photos shooting."
         }
@@ -48,11 +48,11 @@
     "eduction": {
         "japanese": {
             "sj_name": "ECC Kokusai College Of Foreign Languages",
-            "sj_timeRange": "2020/10 - 2022/03"
+            "sj_period": "2020/10 - 2022/03"
         },
         "it": {
             "si_name": "ECC College Of Computer and Multimedia",
-            "si_timeRange": "2022/04 - 2025/03"
+            "si_period": "2022/04 - 2025/03"
         }
     },
     "portfolio": {
